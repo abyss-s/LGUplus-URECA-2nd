@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#contents {
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+  witdh: 800px;
+  height: 600px;
+  position: raletive; /* 기준 요소에 ralative 적용 */
+}
+h1 {
+  color: #fff;
+  font-size: 120px;
+  text-shadow: 5px 9px 0 #000;
+  position: absolute; /* 특정 요소에 absolute 적용 */
+  right: 100px;
+  bottom: 100px;
+}

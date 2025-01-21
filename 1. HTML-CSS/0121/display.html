@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>display 속성</title>
+    <style>
+      nav ul {
+        list-style: none;
+      }
+
+      nav ul li {
+        /* 블록 레벨 요소 성질 가지면서 가로로 배치하기 위함 */
+        display: inline-block;
+        width: 100px;
+        height: 40px;
+        line-height: 40px; /* 상하정렬 */
+        text-align: center; /* 좌우정렬 */
+        border: 1px solid #000;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

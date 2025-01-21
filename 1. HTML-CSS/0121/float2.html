@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float과 clear 속성</title>
+    <style>
+      .wrapper {
+        width: 800px;
+        margin: 10px auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+      }
+      .box {
+        padding: 20px;
+        margin: 20px;
+      }
+      #box1 {
+        float: left;
+        background-color: rgb(255, 255, 64);
+      }
+      #box2 {
+        float: right;
+        background-color: rgb(107, 144, 246);
+      }
+      .clear {
+        clear: both;
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box" id="box1">박스1</div>
+      <div class="box" id="box2">박스2</div>
+      <p>
+        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
+        and typesetting industry. Lorem Ipsum has been the industry's standard
+        dummy text ever since the 1500s, when an unknown printer took a galley
+        of type and scrambled it to make a type specimen book.
+      </p>
+      <p class="clear">
+        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
+        and typesetting industry. Lorem Ipsum has been the industry's standard
+        dummy text ever since the 1500s, when an unknown printer took a galley
+        of type and scrambled it to make a type specimen book.
+      </p>
+    </div>
+  </body>
+</html>

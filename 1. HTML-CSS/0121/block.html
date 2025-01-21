@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>블록 레벨, 인라인 레벨</title>
+    <style>
+      body * {
+        /* body 하위 모든 요소에 대해 */
+        border: 1px solid blue;
+      }
+      .accent {
+        color: red;
+        font-weight: bold;
+      }
+      .box1 {
+        width: 500px;
+        height: 100px;
+        /* border-box: 테두리나 패딩 등 포함하여 영역 계산 */
+        box-sizing: border-box;
+        padding: 20px;
+      }
+      .box2 {
+        width: 70%;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>시간이란..</h1>
+    <div>
+      내일 죽을 것처럼
+      <span class="accent">오늘</span>을 살고
+    </div>
+    <p>
+      영원이 살 것 처럼 <br />
+      내일을 꿈꾸어라.
+    </p>
+
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+  </body>
+</html>
