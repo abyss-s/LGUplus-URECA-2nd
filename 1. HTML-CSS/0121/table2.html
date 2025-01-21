@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>표 스타일 실습2</title>
+    <style>
+      table {
+        caption-side: bottom;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: 1px dotted black;
+        padding: 12px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption style="text-align: right">
+        출처: 통계청 100대지표
+      </caption>
+      <colgroup>
+        <col />
+        <col span="3" />
+        <!-- 3개의 열을 묶음 -->
+        <col style="background-color: azure" />
+      </colgroup>
+      <tr>
+        <thead>
+          <tr>
+            <th>지표</th>
+            <th>2019</th>
+            <th>2020</th>
+            <th>2021</th>
+            <th>2022</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>가구수</b></td>
+            <td>20,891,348</td>
+            <td>21,484,785</td>
+            <td>22,022,753</td>
+            <td>22,383,187</td>
+          </tr>
+          <tr>
+            <td><b>1인가구</b></td>
+            <td>6,127,516</td>
+            <td>6,643,345</td>
+            <td>7,156,257</td>
+            <td>7,435,223</td>
+          </tr>
+        </tbody>
+      </tr>
+    </table>
+  </body>
+</html>
