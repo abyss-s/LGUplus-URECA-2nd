@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(image-set/09/images/bg2.png);
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-attachment: fixed;
+      }
+      div {
+        width: 400px;
+        height: 250px;
+        border: 20px solid rgba(218, 218, 218, 0.5);
+        padding: 20px;
+        margin-bottom: 20px;
+        background-image: url(image-set/09/images/bg3.png);
+        background-repeat: no-repeat;
+        background-position: right top;
+      }
+      /* 배경 이미지 범위 설정 */
+      #bg1 {
+        /* padding까지 배경 이미지 표시 */
+        background-origin: padding-box;
+      }
+      #bg2 {
+        /* border까지 배경 이미지 표시 */
+        background-origin: border-box;
+      }
+      #bg3 {
+        /* 내용 영역만 배경 이미지 표시 */
+        background-origin: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bg1">
+      <h2>바빠 시리즈</h2>
+      <h3>-바쁜 학생을 위한 빠른 학습법</h3>
+      <p>
+        쉬운 내용은 압축하여 빠르게, 어려운 내용은 더 많이 공부하는 효율적인
+        학습 설계가 되어 있는 바빠 연산법과 '손이 기억하는 훈련 프로그램'인 바빠
+        영어 시리즈가 있습니다.
+      </p>
+    </div>
+    <div id="bg2">
+      <h2>바빠 시리즈</h2>
+      <h3>-바쁜 학생을 위한 빠른 학습법</h3>
+      <p>
+        쉬운 내용은 압축하여 빠르게, 어려운 내용은 더 많이 공부하는 효율적인
+        학습 설계가 되어 있는 바빠 연산법과 '손이 기억하는 훈련 프로그램'인 바빠
+        영어 시리즈가 있습니다.
+      </p>
+    </div>
+    <div id="bg3">
+      <h2>바빠 시리즈</h2>
+      <h3>-바쁜 학생을 위한 빠른 학습법</h3>
+      <p>
+        쉬운 내용은 압축하여 빠르게, 어려운 내용은 더 많이 공부하는 효율적인
+        학습 설계가 되어 있는 바빠 연산법과 '손이 기억하는 훈련 프로그램'인 바빠
+        영어 시리즈가 있습니다.
+      </p>
+    </div>
+  </body>
+</html>
