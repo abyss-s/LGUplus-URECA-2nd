@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>미디어 쿼리 실습</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+          color: #fff;
+          background-image: url(image-set/10/images/bg-dark.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-attachment: fixed;
+        }
+
+        @media screen and (max-width: 768px) {
+          color: #fff;
+          background-image: url(image-set/10/images/bg-small.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-attachment: fixed;
+        }
+
+        @media screen and (min-width: 1023px) {
+          background-image: url(image-set/10/images/bg-light.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-attachment: fixed;
+        }
+      }
+      h1 {
+        font-size: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>미디어 쿼리</h1>
+  </body>
+</html>

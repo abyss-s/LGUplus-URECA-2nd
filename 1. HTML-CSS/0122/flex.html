@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex box 레이아웃</title>
+    <style>
+      .container {
+        width: 800px;
+        display: flex;
+        border: 1px solid #222;
+        background-color: #eee;
+        gap: 30px;
+      }
+      .box {
+        background-color: #222;
+        flex-basis: 150px; /* 플렉스 항목의 기본 크기 */
+        p {
+          color: white;
+          text-align: center;
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"><p>가나다라마</p></div>
+      <div class="box"><p>가나다라마바사</p></div>
+      <div class="box"><p>가나다</p></div>
+    </div>
+  </body>
+</html>
