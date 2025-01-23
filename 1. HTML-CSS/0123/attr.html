@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>속성 선택자</title>
+    <style>
+      ul {
+        list-style-type: none;
+      }
+      li {
+        width: 120px;
+        display: inline-block;
+        margin: 10px;
+      }
+      li a {
+        text-decoration: none;
+        color: black;
+        padding: 5px 20px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      /* href 속성이 있는 a 요소의 스타일 지정 */
+      a[href] {
+        background-color: yellow;
+        border: 1px solid black;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a>메인 메뉴: </a></li>
+      <li><a href="#">메뉴 1: </a></li>
+      <li><a href="#">메뉴 2: </a></li>
+      <li><a href="#">메뉴 3: </a></li>
+      <li><a href="#">메뉴 4: </a></li>
+    </ul>
+  </body>
+</html>

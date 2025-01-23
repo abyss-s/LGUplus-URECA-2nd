@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상 선택자</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
+      }
+      .item {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      /* 가상 선택자를 사용해서 항목을 선택 */
+      .container :nth-child(3) {
+        background-color: yellow;
+      }
+      .container :nth-child(2n) {
+        background-color: rgb(88, 255, 199);
+      }
+      .container :nth-child(2n + 1) {
+        background-color: rgb(188, 117, 255);
+      }
+      .container :nth-child(3n) {
+        background-color: rgb(255, 111, 111);
+      }
+      /* 4번째부터 끝까지 */
+      .container :nth-child(n + 4) {
+        background-color: rgb(255, 170, 86);
+      }
+      /* 첫번째부터 4번째까지 */
+      .container :nth-child(-n + 4) {
+        background-color: rgb(93, 206, 255);
+      }
+      /* 3번째부터 6번째까지  */
+      .container :nth-child(n + 3):nth-child(-n + 6) {
+        background-color: rgb(102, 251, 117);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+    </div>
+  </body>
+</html>

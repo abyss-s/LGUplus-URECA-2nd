@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Ubuntu+Condensed&display=swap');
+body {
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+header h1 {
+  font-family: 'Anton SC';
+  letter-spacing: 0.3rem;
+  margin-left: 10px;
+}
+main {
+  padding: 50px;
+}
+img {
+  border-radius: 20px;
+}
+
+#menu ul,
+li {
+  list-style: none;
+  padding-left: 80px;
+  display: flex;
+}
+#menu ul li a {
+  text-decoration: none;
+  color: rgb(228, 228, 228);
+}
+#menu ul li a:hover {
+  text-decoration: underline;
+}
+header {
+  display: flex;
+  background-color: rgb(26, 77, 153);
+}
+nav > ul {
+  padding-top: 30px;
+}
+p {
+  line-height: 1.8;
+}
+#container {
+  display: flex;
+  gap: 30px;
+
+  @media screen and (max-width: 667px) {
+    flex-direction: column;
+  }
+}
+#rnb {
+  padding-right: 20px;
+}
+#menu {
+  color: white;
+  font-weight: bold;
+}
+
+hr {
+  border: 1px solid #222;
+}
+
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  color: #646464;
+  list-style: none;
+  padding-left: 20px;
+}
+#footer ul li a {
+  text-decoration: none;
+  color: #646464;
+}
+#footer ul li a:hover {
+  text-decoration: underline;
+}
+/* 마지막 li 제외하고 가상 요소 붙이기 */
+#footer ul li:not(:last-child)::after {
+  content: '|';
+  display: flex;
+  padding-left: 30px;
+}

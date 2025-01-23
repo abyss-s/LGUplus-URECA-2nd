@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>속성 선택자</title>
+    <style>
+      ul {
+        list-style-type: none;
+      }
+      li {
+        display: inline-block;
+        margin: 10px;
+      }
+      li a {
+        text-decoration: none;
+        color: brown;
+        padding: 5px 20px;
+      }
+
+      /* class 속성값이 button이 포함된 a 요소에만 스타일 지정 */
+      a[class~='button'] {
+        box-shadow: rgb(115, 250, 111) 4px 4px;
+        border: 1px solid rgba(183, 183, 183, 0.697);
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#" class="flat">메뉴 1</a></li>
+      <li><a href="#" class="flat">메뉴 2</a></li>
+      <li><a href="#" class="button">메뉴 3</a></li>
+      <li><a href="#" class="flat button">메뉴 4</a></li>
+    </ul>
+  </body>
+</html>

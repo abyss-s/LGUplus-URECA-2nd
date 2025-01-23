@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 960px;
+        margin: 0 auto;
+      }
+      .navi {
+        width: 960px;
+        height: 60px;
+        border-bottom: 2px solid #ccc;
+      }
+      .navi ul {
+        list-style-type: none;
+        padding: 10px 5px 0 0;
+        display: flex;
+      }
+      .navi ul li {
+        width: 150px;
+        padding: 10px;
+      }
+      .navi a:link,
+      .navi a:visited {
+        display: block;
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+      }
+      .navi a:hover,
+      .navi a:focus {
+        background-color: #222;
+        color: white;
+      }
+      .navi a:active {
+        background-color: red;
+      }
+      .contents {
+        width: 400px;
+        margin: 30px auto;
+        padding: 20px;
+        border: 1px solid #222;
+        border-radius: 10px;
+      }
+
+      /* 앵커 대상에 스타일 지정하기 */
+      #intro:target {
+        background-color: blue;
+        color: white;
+      }
+      #room:target {
+        background-color: rgb(255, 251, 142);
+      }
+      #reservation:target {
+        background-color: rgb(255, 191, 223);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navi">
+        <ul>
+          <li><a href="#intro">이용 안내</a></li>
+          <li><a href="#room">객실 소개</a></li>
+          <li><a href="#reservation">예약 방법 및 요금</a></li>
+          <li><a href="#">예약하기</a></li>
+        </ul>
+      </nav>
+      <div id="intro" class="contents">
+        <h2>이용 안내</h2>
+        <p>내용이 들어갑니다.</p>
+      </div>
+      <div id="room" class="contents">
+        <h2>객실 소개</h2>
+        <p>내용이 들어갑니다.</p>
+      </div>
+      <div id="reservation" class="contents">
+        <h2>예약 방법 및 요금</h2>
+        <p>내용이 들어갑니다.</p>
+      </div>
+    </div>
+  </body>
+</html>

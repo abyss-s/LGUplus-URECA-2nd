@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>속성 선택자</title>
+    <style>
+      ul {
+        list-style-type: none;
+      }
+      li {
+        padding: 5px 30px;
+      }
+      li a {
+        text-decoration: none;
+        color: black;
+      }
+
+      /* target 속성값이 _blank인 a 요소에만 스타일 지정 */
+      a[target='_blank'] {
+        background: url(../0122/image-set/13/images/newwindow.png) no-repeat
+          center right;
+        padding-right: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="https://html.spec.whatwg.org" target="_blank">HTML</a></li>
+      <li>
+        <a href="https://www.w3.org/TR/selectors">CSS Selector Level 3</a>
+      </li>
+      <li><a href="https://www.w3.org/TR/css3-mediaqueries">미디어쿼리</a></li>
+    </ul>
+  </body>
+</html>

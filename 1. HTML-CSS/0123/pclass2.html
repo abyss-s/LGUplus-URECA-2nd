@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #222;
+      }
+      nav {
+        width: 600px;
+        height: 60px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav a {
+        font-size: 15px;
+        font-weight: 700px;
+        color: #fff;
+        padding: 0.5rem 0;
+        text-decoration: none;
+      }
+      nav a:hover {
+        color: #ff7a18;
+      }
+
+      /* :hos 가상 선택자 활용
+          nav의 a가 선택될때 선택되지 않은 a에 대해
+      */
+      nav:has(a:hover) a:not(:hover) {
+        opacity: 0.3;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">PORTFOLIO</a>
+      <a href="#">CONTACT</a>
+    </nav>
+  </body>
+</html>

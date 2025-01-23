@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ccc;
+  padding: 20px;
+}
+
+#signup {
+  background: #fff;
+  border: 1px solid #222;
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+  margin: 30px auto;
+}
+
+#signup fieldset {
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+#signup legend {
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 5px;
+  padding-bottom: 10px;
+}
+
+#signup ul li {
+  display: flex;
+  align-items: center;
+  line-height: 30px;
+  list-style: none;
+  padding: 5px 10px;
+  margin-bottom: 2px;
+}
+
+#signup button {
+  border: 1px solid #222;
+  border-radius: 20px;
+  display: block;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin: auto;
+  padding: 7px 25px;
+}
+
+#signup label {
+  font-size: 13px;
+  width: 110px;
+}
+
+/* type이 "radio"가 아닌 모든 input 요소 */
+#signup input:not([type='radio']) {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 13px;
+  padding: 5px;
+  width: 200px;
+}
+
+/* 필수 입력 필드의 스타일 */
+#signup input[required] {
+  border: 1px solid red;
+}
+
+/* 읽기 전용 필드의 스타일 */
+#signup input[readonly] {
+  border: none;
+}
+
+/* 마지막 fieldset의 스타일 */
+#signup fieldset:last-child {
+  border: none;
+  margin-bottom: 0;
+}
+
+/* #singup 하위에 있는 버튼에 마우스 올렸을 때 스타일 */
+#signup button:hover {
+  background-color: #222;
+  color: #fff;
+}
