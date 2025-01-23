@@ -8,7 +8,7 @@
 
 - [웹 개요](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/1.%20HTML-CSS/1.intro.md)
 - [HTML](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/1.%20HTML-CSS/2.html.md)
-- [CSS](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/1.%20HTML-CSS/3.css.md)
+- [CSS 기초](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/1.%20HTML-CSS/3.css.md)
 - [반응형 웹을 위한 CSS](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/1.%20HTML-CSS/4.css-reponsive-web.md)
 
 ### 2. JavaScript
