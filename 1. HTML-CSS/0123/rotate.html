@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      .origin {
+        width: 152px;
+        height: 180px;
+        border: 1px solid black;
+        margin: 30px;
+        float: left;
+      }
+      .origin > div {
+        width: 152px;
+        height: 180px;
+      }
+      .rotatex:hover {
+        transform: rotateX(50deg);
+      }
+      /* 원근감은 부모 요소에 적용해야 함 */
+      #pers {
+        perspective: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="origin">
+      <div class="rotatex">
+        <img src="../0122/image-set/14/images/sunset.jpg" alt="" />
+      </div>
+    </div>
+    <div class="origin" id="pers">
+      <div class="rotatex">
+        <img src="../0122/image-set/14/images/sunset.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

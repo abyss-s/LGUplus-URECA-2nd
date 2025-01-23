@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      .origin {
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        margin: 30px;
+        float: left;
+      }
+      .box {
+        width: 150px;
+        height: 150px;
+        width: 150px;
+        height: 150px;
+        background-color: orange;
+
+        /* transition 효과 추가 */
+        transition: all 2s;
+      }
+      #pers {
+        perspective: 300px;
+      }
+      .rotatex:hover {
+        transform: rotateX(55deg);
+      }
+      .rotatey:hover {
+        transform: rotateY(55deg);
+      }
+      .rotate:hover {
+        transform: rotate(55deg);
+      }
+      .rotatez:hover {
+        transform: rotate3d(2.5, 1.2, -1.5, 55deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="origin" id="pers">
+      <div class="box rotatex"></div>
+    </div>
+    <div class="origin" id="pers">
+      <div class="box rotatey"></div>
+    </div>
+    <div class="origin">
+      <div class="box rotate"></div>
+    </div>
+    <div class="origin" id="pers">
+      <div class="box rotatez"></div>
+    </div>
+  </body>
+</html>
