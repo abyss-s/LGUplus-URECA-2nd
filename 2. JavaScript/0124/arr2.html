@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 객체 메서드</title>
+  </head>
+  <body>
+    <div class="container">
+      <script>
+        let nums = [1, 2, 3];
+        let chars = ['a', 'b', 'c', 'd'];
+
+        // concat
+        let numsChars = nums.concat(chars);
+        let charsNums = chars.concat(nums);
+
+        document.write(`num에 chars 합치면 이런 배열 => [${numsChars}]<br>`);
+        document.write(`chars에 nums 합치면 이런 배열 => [${charsNums}]<br>`);
+        document.write('<hr>');
+
+        // join
+        let str1 = nums.join();
+        let str2 = nums.join('/');
+
+        document.write(`구분자 없이 조인: ${str1}<br>`);
+        document.write(`구분자를 슬래시로 넣은 조인: ${charsNums}`);
+        document.write('<hr>');
+
+        // push, unshift
+        let ret1 = nums.push(4, 5);
+        document.write(`추가 요소: ${ret1},nums 배열: ${nums}<br>`);
+        let ret2 = nums.unshift(0);
+        document.write(`추가 요소: ${ret2},nums 배열: ${nums}`);
+        document.write('<hr>');
+
+        // pop, shift
+        let ret3 = nums.pop();
+        document.write(`꺼낸 요소: ${ret3}, nums 배열: ${nums}<br>`);
+        let ret4 = nums.shift();
+        document.write(`꺼낸 요소: ${ret4}, nums 배열: ${nums}`);
+        document.write('<hr>');
+      </script>
+    </div>
+  </body>
+</html>
