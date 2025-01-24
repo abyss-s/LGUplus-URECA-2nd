@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      p {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let num = parseInt(prompt('얼마까지 더할까용?'));
+      let sum = 0;
+      for (let i = 1; i <= num; i++) {
+        sum += i;
+      }
+      document.write(`<p>1부터 ${num}까지 더하면 ${sum}</p>`);
+    </script>
+  </body>
+</html>

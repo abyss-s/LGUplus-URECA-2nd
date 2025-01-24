@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>즉시 실행 함수</title>
+    <style>
+      .accent {
+        color: blue;
+        font-weight: bold;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // // 즉시 실행 함수 사용하기
+      // (function () {
+      //   let userName = prompt('이름을 입력하세용');
+      //   document.write(
+      //     ` <p>
+      //       안녕하세요? <span class="accent">${userName}</span>
+      //     </p>`
+      //   );
+      // })();
+
+      (function (a, b) {
+        sum = a + b;
+      })(100, 200);
+      document.write(
+        ` <p>
+            함수 실행결과는 <span class="accent">${sum}</span>
+          </p>`
+      );
+    </script>
+  </body>
+</html>
