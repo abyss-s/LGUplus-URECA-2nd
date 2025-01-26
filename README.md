@@ -30,11 +30,11 @@
 
 ## 🦞 Assignments
 
-- html 및 css를 활용해 자기소개 페이지 만들기 [↗️ Github](https://github.com/abyss-s/ureca-introduce-myself) [↗️ Release link](abyss-s.github.io/ureca-introduce-myself/)
+- html 및 css를 활용해 자기소개 페이지 만들기 [↗️Github](https://github.com/abyss-s/ureca-introduce-myself) [↗️Release link](abyss-s.github.io/ureca-introduce-myself/)
 
 ## 📚 Study
 
-- CS 스터디
+- CS 스터디 [↗️Team Notion](https://admitted-seat-34f.notion.site/CS-182672106a2080928891fd32a18d1dca?pvs=4)
 
 ## 💻 Projects
 
