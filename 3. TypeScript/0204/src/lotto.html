@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lotto</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      #btn {
+        display: block;
+        margin: 0 auto 20px;
+        padding: 5px 10px;
+        background-color: plum;
+        color: blueviolet;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 19px;
+      }
+      #view {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        padding: 20px;
+        width: 700px;
+        height: 120px;
+        background-color: lightgray;
+      }
+      .ball {
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        border-radius: 50%;
+        line-height: 70px;
+        font-weight: bold;
+        align-self: center;
+      }
+      .ball0 {
+        background-color: tomato;
+      }
+      .ball1 {
+        background-color: orange;
+      }
+      .ball2 {
+        background-color: greenyellow;
+      }
+      .ball3 {
+        background-color: lightcyan;
+      }
+      .ball4 {
+        background-color: plum;
+      }
+    </style>
+    <script src="lotto.js"></script>
+  </head>
+  <body>
+    <h1>이번주 로또 예상 번호</h1>
+    <button id="btn">번호 생성</button>
+    <div id="view"></div>
+  </body>
+</html>

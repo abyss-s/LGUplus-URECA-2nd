@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가위바위보 게임</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      #btn {
+        display: block;
+        margin: 0 auto 20px;
+        padding: 5px 10px;
+        background-color: plum;
+        color: blueviolet;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 19px;
+      }
+      .result,
+      .choice {
+        width: 100px;
+        height: 100px;
+        align-self: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      #score {
+        text-align: center;
+        margin-top: 20px;
+      }
+      #choices {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+      #view {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        padding: 50px;
+        width: 250px;
+        height: 250px;
+        border: 1px solid lightgray;
+        border-radius: 30px;
+      }
+      #view img {
+        width: 200px;
+        height: 200px;
+      }
+      #result {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <h1>가위바위보 게임</h1>
+
+    <div id="view"></div>
+
+    <div id="choices">
+      <img src="images/rock.png" class="choice" alt="바위" data-value="0" />
+      <img src="images/scissors.png" class="choice" alt="가위" data-value="1" />
+      <img src="images/paper.png" class="choice" alt="보" data-value="2" />
+    </div>
+    <div id="result"></div>
+
+    <div id="score">
+      <p>
+        <span id="wins">0</span>승 <span id="losses">0</span>패
+        <span id="draws">0</span>무
+      </p>
+    </div>
+    <button id="btn">게임 시작</button>
+  </body>
+</html>
