@@ -22,6 +22,11 @@
 3. **TypeScript**
 
    1. [타입스크립트 개요](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/3.%20TypeScript/1.ts-intro.md)
+   2. 기본 문법
+      - [타입과 변수](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/3.%20TypeScript/2.ts-variables.md)
+      - [함수](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/3.%20TypeScript/3.ts-func.md)
+      - [객체](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/3.%20TypeScript/4.ts-object.md)
+      - [배열과 튜플](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/3.%20TypeScript/5.ts-array.md)
 
 4. **Algorithm**
 5. **Backend**
