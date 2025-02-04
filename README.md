@@ -17,10 +17,13 @@
    2. [기본 문법](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/2.%20JavaScript/2.js-basic.md)
    3. [함수와 이벤트](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/2.%20JavaScript/3.js-func-event.md)
    4. [객체와 메서드](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/2.%20JavaScript/4.js-object.md)
-   5. [문서 객체 모델(DOM)](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/2.%20JavaScript/4.js-dom.md)
+   5. [문서 객체 모델(DOM)](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/2.%20JavaScript/5.js-dom.md)
 
-3. **Algorithm**
-4. **Backend**
+3. **TypeScript**
+
+   1. [타입스크립트 개요](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/2.%20TypeScript/1.ts-intro.md)
+
+4. **Algorithm**
 5. **Backend**
 6. **User Experience(UX/UI)**
 7. **React**
