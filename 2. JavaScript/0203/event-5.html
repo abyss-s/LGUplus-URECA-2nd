@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 이벤트 객체 - addEventListner</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      img {
+        padding: 20px;
+        height: 250px;
+        border-radius: 10px;
+        border: 1px solid #eee;
+        box-shadow: 2px 2px 5px #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/kitty-1.png" alt="" id="cat" />
+    </div>
+    <script>
+      let cat = document.querySelector('#cat');
+
+      // cat.addEventListener('mouseover', changePic, false);
+      // cat.addEventListener('mouseout', originPic, false);
+      // function changePic() {
+      //   cat.src = 'images/kitty-2.png';
+      // }
+      // function originPic() {
+      //   cat.src = 'images/kitty-1.png';
+      // }
+
+      // 이벤트 리스너 안에서 화살표 함수 선언
+      cat.addEventListener('mouseover', () => {
+        cat.src = 'images/kitty-2.png';
+      });
+      cat.addEventListener('mouseout', () => {
+        cat.src = 'images/kitty-1.png';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 이벤트 객체</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/cat.jpg" alt="" id="cat" />
+    </div>
+    <script>
+      // DOM을 사용해 이벤트 처리하기
+      let cat = document.querySelector('#cat'); // id가 cat인 요소 선택
+      cat.onclick = (evebt) => {
+        alert(`이미지 파일 경로 출력: ${thi.ssrc}`);
+      };
+    </script>
+  </body>
+</html>
