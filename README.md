@@ -21,7 +21,7 @@
 
 3. **TypeScript**
 
-   1. [타입스크립트 개요](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/2.%20TypeScript/1.ts-intro.md)
+   1. [타입스크립트 개요](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/3.%20TypeScript/1.ts-intro.md)
 
 4. **Algorithm**
 5. **Backend**
