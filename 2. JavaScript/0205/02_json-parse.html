@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+      localstroage getItem 실습
+      */
+      const todoJson = localStorage.getItem('todos');
+      console.log(typeof todoJson);
+      //string
+
+      console.log('todoJson: ', todoJson);
+      // todoJson:  [{"id":1,"content":"html","completed":true},{"id":2,"content":"css","completed":true},{"id":3,"content":"javascript","completed":false}]
+
+      const todos = JSON.parse(todoJson);
+      console.log(todos);
+      // [
+      //   {
+      //     id: 1,
+      //     content: 'html',
+      //     completed: true,
+      //   },
+      //   {
+      //     id: 2,
+      //     content: 'css',
+      //     completed: true,
+      //   },
+      //   {
+      //     id: 3,
+      //     content: 'javascript',
+      //     completed: false,
+      //   },
+      // ];
+
+      for (const todo of todos) {
+        console.log(
+          `todo id: ${todo.id}\tisCompleted:${todo.isCompleted}\tcontent:${todo.content}`
+        );
+      }
+      // todo id: 1	isCompleted:undefined	content:html
+      // todo id: 2	isCompleted:undefined	content:css
+      // todo id: 3	isCompleted:undefined	content:javascript
+    </script>
+  </head>
+  <body></body>
+</html>
