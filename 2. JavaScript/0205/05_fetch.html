@@ -30,6 +30,8 @@
       // 버튼이 클릭되면 비동기 통신 시도
       document.querySelector('#btn').addEventListener('click', () => {
         console.log('버튼 클릭됨');
+        // js에서 기본으로 제공하는 fetch 함수로 비동기 통신하기
+        // 기본적으로 Promise 객체를 리턴
         fetch('https://jsonplaceholder.typicode.com/posts/1')
           // 응답 데이터가 JSON인 경우, .json()을 통해 JSON 객체로 변경해서 리턴
           .then((response) => response.json())

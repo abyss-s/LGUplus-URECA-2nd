@@ -19,7 +19,19 @@
       getData(1)
         // 성공인 경우 => resolve 함수를 인자로
         .then(() => {
-          console.log('success');
+          console.log('success1');
+          console.log(1);
+          getData(1);
+        })
+        .then(() => {
+          console.log('success2');
+          console.log(2);
+          getData(1);
+        })
+        .then(() => {
+          console.log('success3');
+          console.log(3);
+          getData(1);
         })
         // 실패인 경우 => => reject 함수를 인자로
         .catch(() => {
