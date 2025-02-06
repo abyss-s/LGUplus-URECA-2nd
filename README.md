@@ -33,6 +33,11 @@
       - [배열과 튜플](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/3.%20TypeScript/5.ts-array.md)
 
 4. **Algorithm**
+
+   1. **Java**
+
+   - [기본 문법](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/1.java-basic.md)
+
 5. **Backend**
 6. **User Experience(UX/UI)**
 7. **React**
