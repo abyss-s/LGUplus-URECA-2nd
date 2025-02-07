@@ -33,5 +33,13 @@ public class BitOperateTest {
 		// abcdefgh
 		int checkbit = 0b00000000;
 
+		// ~ 비트 반전
+		int p = 0b1100;
+		System.out.println(~p);
+		System.out.println(Integer.toBinaryString(~p)); // 1의 보수
+		int p2 = 12;
+		System.out.println(Integer.toBinaryString(p2));
+		System.out.println(Integer.toBinaryString(~p2)); // 2의 보수
+
 	}
 }

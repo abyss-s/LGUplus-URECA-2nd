@@ -45,8 +45,42 @@ public class BitMaskTest {
 		A |= (1<<k);
 		System.out.println(Integer.toBinaryString(A));
 		
+		/*
+		 *4. 원소 삭제: k번째 위치에 있는 원소를 삭제 (0으로 만들기) 
+		 * 
+		 * */
+		A&= ~(1<<k);
+		System.out.println(Integer.toBinaryString(A));
 		
-		
+		/*
+		 *  5.마지막 1의 위치 찾기 
+		 *  A&-A : A의 인지수에서 1의 마지막 위치를 찾기  
+		 *  2의보수 -> 앞까지 반전하다가 마지막 1부터는 동일함. 
+		 * */
+	     A = 0b1100111000;
+	 	 System.out.println(Integer.toBinaryString(A));
+	     System.out.println(Integer.toBinaryString(A&-A));
+	     
+	     /*
+	      * 6. 최소 원소 지우기
+	      * A & (A-1)
+	      * 
+	      * */
+	 	 System.out.println(Integer.toBinaryString(A));
+	     System.out.println(Integer.toBinaryString(A & (A-1)));
+	     
+	     
+	    String[] str = {"a", "b", "c", "d"};
+	     /*
+	      *  7. 모든 부분 집합 순회하기 
+	      */
+	    System.out.println("부분 집합 출력 ");
+	     int s = 0b1101;
+	     for(int subset =s; subset !=0; subset=(subset-1)&s) {
+	    	 System.out.println(Integer.toBinaryString(subset));
+	     }
+	     
+	     
 	}
 
 }
