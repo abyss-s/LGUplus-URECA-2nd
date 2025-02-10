@@ -36,7 +36,19 @@
 
    1. **Java**
 
-   - [기본 문법](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/1.java-basic.md)
+      - [기본 문법](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/1.java-basic.md)
+      - [객체지향 프로그래밍](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/3.java-object.md)
+
+   2. **PS**
+
+      - [알고리즘 기초](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/2.algo-basic.md)
+
+      | 문제          | JAVA                                                                                                                                                                                                       | JavaScript                                                                                                   |
+      | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+      | 문제이름      | [풀이](#)                                                                                                                                                                                                  | [풀이](#)                                                                                                    |
+      | 평균은 넘겠지 | [풀이](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/Algo/src/boj/bronze/Main_4344_B1_%ED%8F%89%EA%B7%A0%EC%9D%80_%EB%84%98%EA%B2%A0%EC%A7%80_%EA%B9%80%EB%8F%99%EA%B7%BC.java) | [풀이](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/0207/01_io.js)               |
+      | 기지국 설치   | [풀이](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/Algo/src/fillCell/BaseStation1.java)                                                                                       | [풀이](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/0210/BaseStation1.js)        |
+      | 랜덤넘버패턴  | [풀이](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/Algo/src/fillCell/RandomNumberPattern.java)                                                                                | [풀이](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/0210/RandomNumberPattern.js) |
 
 5. **Backend**
 6. **User Experience(UX/UI)**
