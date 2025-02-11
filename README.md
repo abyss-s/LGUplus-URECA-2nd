@@ -38,10 +38,13 @@
 
       - [기본 문법](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/1.java-basic.md)
       - [객체지향 프로그래밍](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/3.java-object.md)
+      - [비교 함수 Comparator](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/6.java-compare.md)
 
    2. **PS**
 
       - [알고리즘 기초](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/2.algo-basic.md)
+      - [정렬](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/4.algo-sort.md)
+      - [탐색](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/5.algo-search.md)
 
       | 문제          | JAVA                                                                                                                                                                                                       | JavaScript                                                                                                   |
       | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
