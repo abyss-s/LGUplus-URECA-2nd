@@ -15,7 +15,34 @@ package chapter04;
  * usage  modifier	: 클래스, 메서드, 속성의 기능을 제한한다.
  */
 public class MyDate {
+	private int year, month, day;
+	String name;
 
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		if (year < 2024)
+			System.out.println("2024년 이후로 설정해주세요");
+		else this.year = year;
+	}
+
+	public int getMonth() {
+		return month;
+	}
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+	public int getDay() {
+		return day;
+	}
+
+	public void setDay(int day) {
+		this.day = day;
+	}
 }
 
 
