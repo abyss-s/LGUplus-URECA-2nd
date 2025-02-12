@@ -70,8 +70,8 @@
 ## 📚 Study
 
 - CS 스터디 [↗️Team Notion](https://admitted-seat-34f.notion.site/CS-182672106a2080928891fd32a18d1dca?pvs=4)
-  - 세션 메인 운영: [↗️네트워크 part 1. TCP/IP 프로토콜 ](https://admitted-seat-34f.notion.site/part1-2-11cece6ac0194109be97c86c560239de) [↗️네트워크 part 2. IP와 서브넷팅 ](https://admitted-seat-34f.notion.site/part2-1-195672106a2080e8bf6bf957feaf3fb5) [↗️OS part1](#)
-  - 세션 보조 운영: [↗️디자인패턴](https://admitted-seat-34f.notion.site/915cabf562cf42cf92ced0ce9e6c915c) [↗️DB](#)
+  - 세션 메인 운영: [↗️네트워크 part 1. TCP/IP 프로토콜 ](https://admitted-seat-34f.notion.site/part1-TCP-IP-198672106a20806c871de28c9e9d73f7) [↗️네트워크 part 2. IP주소와 서브넷팅 ](https://admitted-seat-34f.notion.site/part2-IP-198672106a2080c4b79bf7c7fecbad7d) [↗️OS part1](#)
+  - 세션 보조 운영: [↗️디자인패턴](https://admitted-seat-34f.notion.site/1-197672106a2080fd8145f29db5b87dc8) [↗️DB](#)
   - 퀴즈 운영: [↗️OS 퀴즈](#)
 
 ## 💻 Projects
