@@ -4,17 +4,17 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_4344_B1_í‰ê· ì€_ë„˜ê² ì§€_ê¹€ë™ê·¼ {
+public class Main_4344_B1_Æò±ÕÀº_³Ñ°ÚÁö_±èµ¿±Ù {
 
     public static void main(String[] args) throws Exception {
         // input
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int T = Integer.parseInt(br.readLine()); // í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ ê°œìˆ˜
+        int T = Integer.parseInt(br.readLine()); // Å×½ºÆ® ÄÉÀÌ½º °³¼ö
 
         for (int tc = 0; tc < T; tc++) {
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-            int n = Integer.parseInt(st.nextToken()); // í•™ìƒ ìˆ˜
-            int[] scores = new int[n]; // í•™ìƒ ì„±ì  ë°°ì—´
+            int n = Integer.parseInt(st.nextToken()); // ÇĞ»ı ¼ö
+            int[] scores = new int[n]; // ÇĞ»ı ¼ºÀû ¹è¿­
 
             int total = 0;
             for (int i = 0; i < n; i++) {
@@ -22,10 +22,10 @@ public class Main_4344_B1_í‰ê· ì€_ë„˜ê² ì§€_ê¹€ë™ê·¼ {
                 total += scores[i];
             }
 
-            // í‰ê·  ê³„ì‚°
+            // Æò±Õ °è»ê
             double avg = (double) total / n;
 
-            // í‰ê· ì„ ë„˜ëŠ” í•™ìƒ ìˆ˜ ê³„ì‚°
+            // Æò±ÕÀ» ³Ñ´Â ÇĞ»ı ¼ö °è»ê
             int count = 0;
             for (int i = 0; i < n; i++) {
                 if (scores[i] > avg) {
@@ -33,7 +33,7 @@ public class Main_4344_B1_í‰ê· ì€_ë„˜ê² ì§€_ê¹€ë™ê·¼ {
                 }
             }
 
-            // ë¹„ìœ¨ êµ¬í•˜ê¸° (ë°˜ì˜¬ë¦¼í•˜ì—¬ ì†Œìˆ˜ ì…‹ì§¸ ìë¦¬ê¹Œì§€ ì¶œë ¥)
+            // ºñÀ² ±¸ÇÏ±â (¹İ¿Ã¸²ÇÏ¿© ¼Ò¼ö ¼ÂÂ° ÀÚ¸®±îÁö Ãâ·Â)
             double percentage = (double) count / n * 100;
             System.out.printf("%.3f%%\n", percentage);
         }

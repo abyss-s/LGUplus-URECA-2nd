@@ -5,15 +5,15 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main_3273_S3_ë‘_ìˆ˜ì˜_í•©_ì´ì˜ì£¼ {
+public class Main_3273_S3_µÎ_¼öÀÇ_ÇÕ_ÀÌ¿µÁÖ {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
 		int n = Integer.parseInt(st.nextToken());
-		int[] data = new int[n]; // ìˆ˜ì—´ ë°°ì—´
+		int[] data = new int[n]; // ¼ö¿­ ¹è¿­
 
-		// ìˆ˜ì—´ ë‚´ ì›ì†Œ ì…ë ¥ ì²˜ë¦¬
+		// ¼ö¿­ ³» ¿ø¼Ò ÀÔ·Â Ã³¸®
 		st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < n; i++) {
 			data[i] = Integer.parseInt(st.nextToken());
@@ -23,23 +23,23 @@ public class Main_3273_S3_ë‘_ìˆ˜ì˜_í•©_ì´ì˜ì£¼ {
 
 		Arrays.sort(data);
 
-		int start = 0; // í¬ì¸í„°1
-		int end = n - 1; // í¬ì¸í„°2
-		int count = 0; // ì¡°ê±´ì„ ë§Œì¡±í•˜ëŠ” ìŒì˜ ê°œìˆ˜
-		int curSum = 0; // í˜„ì¬ í¬ì¸í„°ì˜ ê°’ í•©ê³„
+		int start = 0; // Æ÷ÀÎÅÍ1
+		int end = n - 1; // Æ÷ÀÎÅÍ2
+		int count = 0; // Á¶°ÇÀ» ¸¸Á·ÇÏ´Â ½ÖÀÇ °³¼ö
+		int curSum = 0; // ÇöÀç Æ÷ÀÎÅÍÀÇ °ª ÇÕ°è
 
-		// two-pointer ì§„í–‰
+		// two-pointer ÁøÇà
 		while (start < end) {
 			curSum = data[start] + data[end];
 
-			// íƒ€ê²Ÿê°’ë³´ë‹¤ ì‘ìœ¼ë©´
+			// Å¸°Ù°ªº¸´Ù ÀÛÀ¸¸é
 			if (curSum < x) {
-				start++; // ì˜¤ë¥¸ìª½ìœ¼ë¡œ ì´ë™
-			} // íƒ€ê²Ÿê°’ë³´ë‹¤ í¬ë©´
+				start++; // ¿À¸¥ÂÊÀ¸·Î ÀÌµ¿
+			} // Å¸°Ù°ªº¸´Ù Å©¸é
 			else if (curSum > x) {
-				end--; // ì™¼ìª½ìœ¼ë¡œ ì´ë™
+				end--; // ¿ŞÂÊÀ¸·Î ÀÌµ¿
 			}
-			// íƒ€ì¼“ê°’ê³¼ ì¼ì¹˜ => ì¡°ê±´ì„ ë§Œì¡±í•˜ëŠ” ê²½ìš°
+			// Å¸ÄÏ°ª°ú ÀÏÄ¡ => Á¶°ÇÀ» ¸¸Á·ÇÏ´Â °æ¿ì
 			else {
 				count++;
 				start++;
@@ -47,6 +47,6 @@ public class Main_3273_S3_ë‘_ìˆ˜ì˜_í•©_ì´ì˜ì£¼ {
 			}
 		}
 
-		System.out.println(count); // ê²°ê³¼ ì¶œë ¥
+		System.out.println(count); // °á°ú Ãâ·Â
 	}
 }
