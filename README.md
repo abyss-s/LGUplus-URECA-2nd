@@ -45,6 +45,7 @@
       - [알고리즘 기초](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/2.algo-basic.md)
       - [정렬](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/4.algo-sort.md)
       - [탐색](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/5.algo-search.md)
+      - [자료구조](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/7.algo-datastructure.md)
 
           <!--| 문제명 | [풀이]() | [풀이]() |-->
 
