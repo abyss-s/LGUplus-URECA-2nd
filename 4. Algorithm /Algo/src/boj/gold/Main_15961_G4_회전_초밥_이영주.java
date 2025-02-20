@@ -4,30 +4,30 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_15961_G4_È¸Àü_ÃÊ¹ä_ÀÌ¿µÁÖ {
+public class Main_15961_G4_íšŒì „_ì´ˆë°¥_ì´ì˜ì£¼ {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
-		// ÀÔ·Â °ª ÀĞ±â
-		int n = Integer.parseInt(st.nextToken()); // Á¢½Ã ¼ö
-		int d = Integer.parseInt(st.nextToken()); // ÃÊ¹ä Á¾·ù ¼ö
-		int k = Integer.parseInt(st.nextToken()); // ¼±ÅÃÇÒ ¿¬¼Ó Á¢½Ã ¼ö
-		int c = Integer.parseInt(st.nextToken()); // ÄíÆù ¹øÈ£
+		// ì…ë ¥ ê°’ ì½ê¸°
+		int n = Integer.parseInt(st.nextToken()); // ì ‘ì‹œ ìˆ˜
+		int d = Integer.parseInt(st.nextToken()); // ì´ˆë°¥ ì¢…ë¥˜ ìˆ˜
+		int k = Integer.parseInt(st.nextToken()); // ì„ íƒí•  ì—°ì† ì ‘ì‹œ ìˆ˜
+		int c = Integer.parseInt(st.nextToken()); // ì¿ í° ë²ˆí˜¸
 
-		int[] plates = new int[n]; // À½½ÄÁ¡ÀÇ ÃÑ Á¢½Ã ¹è¿­
+		int[] plates = new int[n]; // ìŒì‹ì ì˜ ì´ ì ‘ì‹œ ë°°ì—´
 
 		for (int i = 0; i < n; i++) {
-			plates[i] = Integer.parseInt(br.readLine()); // °¢ Á¢½Ã¿¡ ÀÖ´Â ÃÊ¹ä Á¾·ù ÀÔ·Â Ã³¸®
+			plates[i] = Integer.parseInt(br.readLine()); // ê° ì ‘ì‹œì— ìˆëŠ” ì´ˆë°¥ ì¢…ë¥˜ ì…ë ¥ ì²˜ë¦¬
 		}
 
-		int[] sushiCount = new int[d + 1]; // ÀÎµ¦½º·Î ÃÊ¹ä °¡Áş¼ö ¼¿ ¹è¿­
-		int max = 0; // ¼­·Î ´Ù¸¥ ÃÊ¹ä Á¾·ù ÃÖ´ñ°ª(ÃÖÁ¾)
-		int curMax = 0; // ÇØ´ç À©µµ¿ì ´Ü°è±îÁö max ÀúÀåÇÒ temp
+		int[] sushiCount = new int[d + 1]; // ì¸ë±ìŠ¤ë¡œ ì´ˆë°¥ ê°€ì§“ìˆ˜ ì…€ ë°°ì—´
+		int max = 0; // ì„œë¡œ ë‹¤ë¥¸ ì´ˆë°¥ ì¢…ë¥˜ ìµœëŒ“ê°’(ìµœì¢…)
+		int curMax = 0; // í•´ë‹¹ ìœˆë„ìš° ë‹¨ê³„ê¹Œì§€ max ì €ì¥í•  temp
 
 
 		/*
-		 *  sliding window ÃÊ±âÈ­(Ã¹¹øÂ° À©µµ¿ì)
+		 *  sliding window ì´ˆê¸°í™”(ì²«ë²ˆì§¸ ìœˆë„ìš°)
 		 */
 		for (int i = 0; i < k; i++) {
 			if (sushiCount[plates[i]] == 0) {
@@ -35,7 +35,7 @@ public class Main_15961_G4_È¸Àü_ÃÊ¹ä_ÀÌ¿µÁÖ {
 			}
 			sushiCount[plates[i]]++;
 		}
-		// ÄíÆù Àû¿ë
+		// ì¿ í° ì ìš©
 		if (sushiCount[c] == 0) {
 			max = curMax + 1;
 		} else {
@@ -43,28 +43,28 @@ public class Main_15961_G4_È¸Àü_ÃÊ¹ä_ÀÌ¿µÁÖ {
 		}
 
 		/*
-		 *  sliding window ÀÌµ¿½ÃÅ°±â (µÎ¹øÂ° À©µµ¿ìºÎÅÍ ³¡±îÁö )
+		 *  sliding window ì´ë™ì‹œí‚¤ê¸° (ë‘ë²ˆì§¸ ìœˆë„ìš°ë¶€í„° ëê¹Œì§€ )
 		 */
 		for (int i = 1; i < n; i++) {
-			// ÅõÆ÷ÀÎÅÍ·Î »ç¿ëÇÒ ¸Ç¾Õ, ¸ÇµÚ ÀÎµ¦½º °¢°¢ ¼±¾ğ
-			int start = i - 1; // window start - °ğ ³ª°¥ ¿¹Á¤
-			int end = (i + k - 1) % n; // window end - µé¾î¿Ã ¿¹Á¤
-			// end´Â ¿¬¼Ó Á¢½Ã¼ö¸¸Å­ ´õÇØÁÖ°í ¿øÇüÀÌ±â ¶§¹®¿¡ nÀ¸·Î ³ª´²ÁÖ¾î¾ß ÇÔ
+			// íˆ¬í¬ì¸í„°ë¡œ ì‚¬ìš©í•  ë§¨ì•, ë§¨ë’¤ ì¸ë±ìŠ¤ ê°ê° ì„ ì–¸
+			int start = i - 1; // window start - ê³§ ë‚˜ê°ˆ ì˜ˆì •
+			int end = (i + k - 1) % n; // window end - ë“¤ì–´ì˜¬ ì˜ˆì •
+			// endëŠ” ì—°ì† ì ‘ì‹œìˆ˜ë§Œí¼ ë”í•´ì£¼ê³  ì›í˜•ì´ê¸° ë•Œë¬¸ì— nìœ¼ë¡œ ë‚˜ëˆ ì£¼ì–´ì•¼ í•¨
 
-			// start Ã³¸® (»èÁ¦)
-			sushiCount[plates[start]]--; // À©µµ¿ì¿¡¼­ ³ª°¡±â
-			if (sushiCount[plates[start]] == 0) { // ³²Àº Á¾·ù ¾øÀ¸¸é --
+			// start ì²˜ë¦¬ (ì‚­ì œ)
+			sushiCount[plates[start]]--; // ìœˆë„ìš°ì—ì„œ ë‚˜ê°€ê¸°
+			if (sushiCount[plates[start]] == 0) { // ë‚¨ì€ ì¢…ë¥˜ ì—†ìœ¼ë©´ --
 				curMax--;
 			}
 
-			// end Ã³¸® (Ãß°¡)
-			if (sushiCount[plates[end]] == 0) { // »õ·Î µé¾î¿Â°Å¸é ++
+			// end ì²˜ë¦¬ (ì¶”ê°€)
+			if (sushiCount[plates[end]] == 0) { // ìƒˆë¡œ ë“¤ì–´ì˜¨ê±°ë©´ ++
 				curMax++;
 			}
-			sushiCount[plates[end]]++; // À©µµ¿ì¿¡ µé¾î¿È
+			sushiCount[plates[end]]++; // ìœˆë„ìš°ì— ë“¤ì–´ì˜´
 
 
-			// ÄíÆùÀ» Àû¿ëÇÒ ¼ö ÀÖ´Â °æ¿ì
+			// ì¿ í°ì„ ì ìš©í•  ìˆ˜ ìˆëŠ” ê²½ìš°
 			if (sushiCount[c] == 0) {
 				max = Math.max(max, curMax + 1);
 			} else {

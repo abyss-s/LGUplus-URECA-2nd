@@ -1,29 +1,29 @@
 const fs = require('fs');
 
-// ¹éÁØ Á¦Ãâ¿ë
+// ë°±ì¤€ ì œì¶œìš©
 let input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 
-// ·ÎÄÃ Å×½ºÆ®¿ë: ÀÔ·Â ÆÄÀÏ °æ·Î ¼³Á¤
+// ë¡œì»¬ í…ŒìŠ¤íŠ¸ìš©: ì…ë ¥ íŒŒì¼ ê²½ë¡œ ì„¤ì •
 // const filePath =
 //   process.platform === 'linux' ? '/dev/stdin' : __dirname + '/input.txt';
 // const input = fs.readFileSync(filePath).toString().trim().split('\n');
 
-// 2961¹ø : µµ¿µÀÌ°¡ ¸¸µç ¸ÀÀÖ´Â À½½Ä
+// 2961ë²ˆ : ë„ì˜ì´ê°€ ë§Œë“  ë§›ìˆëŠ” ìŒì‹
 const n = Number(input[0]);
 const arr = input.slice(1).map((v) => v.split(' ').map(Number));
-const INF = 1e9; // ¹«ÇÑ´ë
-let min = INF; // ÃÖ¼Ú°ª ( ½Å¸À°ú ¾´¸ÀÀÇ Â÷ÀÌ°¡ °¡Àå ÀÛÀº ¿ä¸®ÀÇ Â÷ÀÌ¸¦ ÀúÀå )
+const INF = 1e9; // ë¬´í•œëŒ€
+let min = INF; // ìµœì†Ÿê°’ ( ì‹ ë§›ê³¼ ì“´ë§›ì˜ ì°¨ì´ê°€ ê°€ì¥ ì‘ì€ ìš”ë¦¬ì˜ ì°¨ì´ë¥¼ ì €ì¥ )
 
-// Àç±Í
+// ì¬ê·€
 const bt = (i, s, b) => {
-  // ±âÀú Á¶°Ç
+  // ê¸°ì € ì¡°ê±´
   if (i == n) {
-    // ½Å¸À°ú ¾´¸ÀÀÌ ¸ğµÎ 0ÀÌ ¾Æ´Ñ °æ¿ì¿¡¸¸ ÃÖ¼Ú°ª °»½Å
+    // ì‹ ë§›ê³¼ ì“´ë§›ì´ ëª¨ë‘ 0ì´ ì•„ë‹Œ ê²½ìš°ì—ë§Œ ìµœì†Ÿê°’ ê°±ì‹ 
     if (s != 1 && b != 0) min = Math.min(min, Math.abs(s - b));
     return;
   }
-  bt(i + 1, s * arr[i][0], b + arr[i][1]); // Àç·á Ãß°¡
-  bt(i + 1, s, b); // Àç·á Ãß°¡ X
+  bt(i + 1, s * arr[i][0], b + arr[i][1]); // ì¬ë£Œ ì¶”ê°€
+  bt(i + 1, s, b); // ì¬ë£Œ ì¶”ê°€ X
 };
 
 bt(0, 1, 0);

@@ -4,18 +4,18 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-public class Main_6808_±Ô¿µÀÌ¿Í_ÀÎ¿µÀÌÀÇ_Ä«µå°ÔÀÓ_ÀÌ¿µÁÖ {
+public class Main_6808_ê·œì˜ì´ì™€_ì¸ì˜ì´ì˜_ì¹´ë“œê²Œì„_ì´ì˜ì£¼ {
 	static int winCount = 0;
 	static int loseCount = 0;
 
-	// swap permutationÀ» À§ÇÑ ½º¿Ò ÇÔ¼ö
+	// swap permutationì„ ìœ„í•œ ìŠ¤ì™‘ í•¨ìˆ˜
 	public static void swap(int[] arr, int i, int j) {
 		int temp = arr[i];
 		arr[i] = arr[j];
 		arr[j] = temp;
 	}
 
-	// backtracking: swap permutation ÀÌ¿ëÇÑ ½º¿Ò Àç±Í
+	// backtracking: swap permutation ì´ìš©í•œ ìŠ¤ì™‘ ì¬ê·€
 	// https://www.jiwon.me/permutations/
 	public static void permute(int[] iny, int start, int end, int[] gyu) {
 		if (start == end) {
@@ -29,7 +29,7 @@ public class Main_6808_±Ô¿µÀÌ¿Í_ÀÎ¿µÀÌÀÇ_Ä«µå°ÔÀÓ_ÀÌ¿µÁÖ {
 		}
 	}
 
-	// ±Ô¿µÀÌ°¡ ÀÌ±â°í Áö´Â È½¼ö¸¦ °è»ê
+	// ê·œì˜ì´ê°€ ì´ê¸°ê³  ì§€ëŠ” íšŸìˆ˜ë¥¼ ê³„ì‚°
 	public static void calculateSum(int[] gyu, int[] iny) {
 		int qyuSum = 0;
 		int inySum = 0;
@@ -54,19 +54,19 @@ public class Main_6808_±Ô¿µÀÌ¿Í_ÀÎ¿µÀÌÀÇ_Ä«µå°ÔÀÓ_ÀÌ¿µÁÖ {
 		int T = sc.nextInt();
 
 		for (int test_case = 1; test_case <= T; test_case++) {
-			int[] gyu = new int[9]; // ±Ô¿µÀÌ Ä«µå
-			boolean[] cards = new boolean[19]; // 1~18 Ä«µå »ç¿ë ³ªÅ¸³¾ ºÒ¸®¾ğ ¹è¿­
+			int[] gyu = new int[9]; // ê·œì˜ì´ ì¹´ë“œ
+			boolean[] cards = new boolean[19]; // 1~18 ì¹´ë“œ ì‚¬ìš© ë‚˜íƒ€ë‚¼ ë¶ˆë¦¬ì–¸ ë°°ì—´
 
-			// ±Ô¿µÀÌ°¡ ³½ Ä«µå ÀÔ·Â
+			// ê·œì˜ì´ê°€ ë‚¸ ì¹´ë“œ ì…ë ¥
 			for (int i = 0; i < 9; i++) {
 				gyu[i] = sc.nextInt();
-				cards[gyu[i]] = true; // Ä«µå »ç¿ë Ã³¸®
+				cards[gyu[i]] = true; // ì¹´ë“œ ì‚¬ìš© ì²˜ë¦¬
 			}
 
-			int[] iny = new int[9]; // ÀÎ¿µÀÌ Ä«µå
+			int[] iny = new int[9]; // ì¸ì˜ì´ ì¹´ë“œ
 			int idx = 0;
 
-			// ÀÎ¿µÀÌ Ä«µå Ã£±â
+			// ì¸ì˜ì´ ì¹´ë“œ ì°¾ê¸°
 			for (int i = 1; i <= 18; i++) {
 				if (!cards[i]) {
 					iny[idx++] = i;

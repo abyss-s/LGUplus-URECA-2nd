@@ -4,44 +4,44 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_15686_G5_Ä¡Å²_¹è´Ş_ÀÌ¿µÁÖ {
-	static int n, m; // µµ½Ã Å©±â, ³²°Ü¾ß ÇÏ´Â Ä¡Å²Áı
-	static int[][] chickens; // Ä¡Å²Áı À§Ä¡ ÀúÀå
-	static int[][] houses; // Áı À§Ä¡ ÀúÀå
-	static int chickenCount = 0; // Ä¡Å²Áı °³¼ö
-	static int houseCount = 0; // Áı °³¼ö
-	static int INF = 100000000; // ÃÖ¼Ò °Å¸® °è»ê¿¡ »ç¿ëÇÒ »ó¼ö°ª ¼±¾ğ
-	static int result = INF; // ÃÖ¼Ò °Å¸® (´ä)
+public class Main_15686_G5_ì¹˜í‚¨_ë°°ë‹¬_ì´ì˜ì£¼ {
+	static int n, m; // ë„ì‹œ í¬ê¸°, ë‚¨ê²¨ì•¼ í•˜ëŠ” ì¹˜í‚¨ì§‘
+	static int[][] chickens; // ì¹˜í‚¨ì§‘ ìœ„ì¹˜ ì €ì¥
+	static int[][] houses; // ì§‘ ìœ„ì¹˜ ì €ì¥
+	static int chickenCount = 0; // ì¹˜í‚¨ì§‘ ê°œìˆ˜
+	static int houseCount = 0; // ì§‘ ê°œìˆ˜
+	static int INF = 100000000; // ìµœì†Œ ê±°ë¦¬ ê³„ì‚°ì— ì‚¬ìš©í•  ìƒìˆ˜ê°’ ì„ ì–¸
+	static int result = INF; // ìµœì†Œ ê±°ë¦¬ (ë‹µ)
 
-	// °Å¸® °è»ê ÇÔ¼ö
+	// ê±°ë¦¬ ê³„ì‚° í•¨ìˆ˜
 	public static int calcDist(int x1, int y1, int x2, int y2) {
 		return Math.abs(x1 - x2) + Math.abs(y1 - y2);
 	}
 
-	// Á¶ÇÕÀ¸·Î ¼øÈ¸ÇÏ¸é¼­ °Å¸® °è»êÇØ¼­ ÃÖ¼Ò°ª ±¸ÇÏ±â
+	// ì¡°í•©ìœ¼ë¡œ ìˆœíšŒí•˜ë©´ì„œ ê±°ë¦¬ ê³„ì‚°í•´ì„œ ìµœì†Œê°’ êµ¬í•˜ê¸°
 	public static void combi(int start, int count, boolean[] visited) {
-		// m°³ ¼±ÅÃµÇ¾úÀ» ¶§
+		// mê°œ ì„ íƒë˜ì—ˆì„ ë•Œ
 		if (count == m) {
-			int totalDist = 0;       // ÀüÃ¼ °Å¸®
+			int totalDist = 0;       // ì „ì²´ ê±°ë¦¬
 			for (int i = 0; i < houseCount; i++) {
 				int minDist = INF;
 				for (int j = 0; j < chickenCount; j++) {
-					if (visited[j]) { // ¼±ÅÃµÈ Ä¡Å²ÁıÀÎ °æ¿ì
+					if (visited[j]) { // ì„ íƒëœ ì¹˜í‚¨ì§‘ì¸ ê²½ìš°
 						int dist = calcDist(houses[i][0], houses[i][1], chickens[j][0], chickens[j][1]);
-						minDist = Math.min(minDist, dist); // ÃÖ¼Ò °Å¸® °»½Å
+						minDist = Math.min(minDist, dist); // ìµœì†Œ ê±°ë¦¬ ê°±ì‹ 
 					}
 				}
 				totalDist += minDist;
 			}
-			result = Math.min(result, totalDist); // ÃÖ¼Ò °Å¸® °»½Å
+			result = Math.min(result, totalDist); // ìµœì†Œ ê±°ë¦¬ ê°±ì‹ 
 			return;
 		}
 
-		// Ä¡Å²Áı¿¡ ´ëÇØ ¸ğµÎ ¼øÈ¸
+		// ì¹˜í‚¨ì§‘ì— ëŒ€í•´ ëª¨ë‘ ìˆœíšŒ
 		for (int i = start; i < chickenCount; i++) {
-			visited[i] = true; // ÇöÀç Ä¡Å²Áı ¼±ÅÃ
-			combi(i + 1, count + 1, visited); // ´ÙÀ½ ´Ü°è
-			visited[i] = false; // ¹æ¹®ÇÔ
+			visited[i] = true; // í˜„ì¬ ì¹˜í‚¨ì§‘ ì„ íƒ
+			combi(i + 1, count + 1, visited); // ë‹¤ìŒ ë‹¨ê³„
+			visited[i] = false; // ë°©ë¬¸í•¨
 		}
 	}
 
@@ -49,30 +49,30 @@ public class Main_15686_G5_Ä¡Å²_¹è´Ş_ÀÌ¿µÁÖ {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 
-		n = Integer.parseInt(st.nextToken()); // µµ½Ã Å©±â
-		m = Integer.parseInt(st.nextToken()); // ³²±æ Ä¡Å²Áı °³¼ö
+		n = Integer.parseInt(st.nextToken()); // ë„ì‹œ í¬ê¸°
+		m = Integer.parseInt(st.nextToken()); // ë‚¨ê¸¸ ì¹˜í‚¨ì§‘ ê°œìˆ˜
 
-		chickens = new int[n * n][2]; // Ä¡Å²Áı ¹è¿­(x, y ÁÂÇ¥ ÀúÀå)
-		houses = new int[n * n][2]; // Áı ¹è¿­(x, y ÁÂÇ¥ ÀúÀå)
+		chickens = new int[n * n][2]; // ì¹˜í‚¨ì§‘ ë°°ì—´(x, y ì¢Œí‘œ ì €ì¥)
+		houses = new int[n * n][2]; // ì§‘ ë°°ì—´(x, y ì¢Œí‘œ ì €ì¥)
 
-		// µµ½Ã Á¤º¸ ÀÔ·Â Ã³¸®
+		// ë„ì‹œ ì •ë³´ ì…ë ¥ ì²˜ë¦¬
 		for (int i = 0; i < n; i++) {
 			st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < n; j++) {
 				int token = Integer.parseInt(st.nextToken());
-				// ÁıÀÌ¸é Áı ¹è¿­¿¡
+				// ì§‘ì´ë©´ ì§‘ ë°°ì—´ì—
 				if (token == 1) {
 					houses[houseCount++] = new int[]{i, j};
 				}
-				// Ä¡Å²ÀÌ¸é Ä¡Å²Áı ¹è¿­¿¡
+				// ì¹˜í‚¨ì´ë©´ ì¹˜í‚¨ì§‘ ë°°ì—´ì—
 				else if (token == 2) {
 					chickens[chickenCount++] = new int[]{i, j};
 				}
 			}
 		}
 
-		boolean[] visited = new boolean[chickenCount]; // boolean ¹è¿­·Î ÇØ´ç Ä¡Å²Áı ¹æ¹® ¿©ºÎ Ã³¸®
-		combi(0, 0, visited); // °è»ê
-		System.out.println(result); // ÃÖ¼Ò °Å¸® Ãâ·Â
+		boolean[] visited = new boolean[chickenCount]; // boolean ë°°ì—´ë¡œ í•´ë‹¹ ì¹˜í‚¨ì§‘ ë°©ë¬¸ ì—¬ë¶€ ì²˜ë¦¬
+		combi(0, 0, visited); // ê³„ì‚°
+		System.out.println(result); // ìµœì†Œ ê±°ë¦¬ ì¶œë ¥
 	}
 }

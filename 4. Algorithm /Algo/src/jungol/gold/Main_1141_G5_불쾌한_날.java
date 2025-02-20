@@ -4,34 +4,34 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-// Á¤¿Ã 1141¹ø. ºÒÄèÇÑ ³¯
+// ì •ì˜¬ 1141ë²ˆ. ë¶ˆì¾Œí•œ ë‚ 
 // https://jungol.co.kr/problem/1141
-public class Main_1141_G5_ºÒÄèÇÑ_³¯ {
+public class Main_1141_G5_ë¶ˆì¾Œí•œ_ë‚  {
 	public static void main(String[] args) throws Exception {
-		//ÀÔÃâ·Â¹Ş±â
+		//ì…ì¶œë ¥ë°›ê¸°
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
 
-		int[] cows = new int[n];  // °¢ ¼ÒµéÀÇ Å°¸¦ ÀúÀåÇÒ ¹è¿­
+		int[] cows = new int[n];  // ê° ì†Œë“¤ì˜ í‚¤ë¥¼ ì €ì¥í•  ë°°ì—´
 
 		long count = 0;
-		Stack<Integer> stack = new Stack<>();  // ÀÚ½ÅÀ» º¼ ¼ö ÀÖ´Â ¼ÒµéÀÇ Å°¸¦ ÀúÀåÇÒ ½ºÅÃ
+		Stack<Integer> stack = new Stack<>();  // ìì‹ ì„ ë³¼ ìˆ˜ ìˆëŠ” ì†Œë“¤ì˜ í‚¤ë¥¼ ì €ì¥í•  ìŠ¤íƒ
 
 		for (int i = 0; i < n; ++i) {
 			cows[i] = Integer.parseInt(br.readLine());
 
-			// ½ºÅÃ¿¡¼­ ÀÚ½Åº¸´Ù Å©°Å³ª °°Àº ¼ÒµéÀº Á¦°Å
-			// (ÀÚ½ÅÀÇ Å°º¸´Ù ÀÛÀº ¼Òµé¸¸ º¼ ¼ö ÀÖ´Ù.)
+			// ìŠ¤íƒì—ì„œ ìì‹ ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ì€ ì†Œë“¤ì€ ì œê±°
+			// (ìì‹ ì˜ í‚¤ë³´ë‹¤ ì‘ì€ ì†Œë“¤ë§Œ ë³¼ ìˆ˜ ìˆë‹¤.)
 			while (!stack.isEmpty() && cows[i] >= stack.peek()) {
 				stack.pop();
 			}
 
-			// ÇöÀç ¼Ò¸¦ º¼ ¼ö ÀÖ´Â ¼Ò¸¦ Ä«¿îÆ®¿¡ Ãß°¡
+			// í˜„ì¬ ì†Œë¥¼ ë³¼ ìˆ˜ ìˆëŠ” ì†Œë¥¼ ì¹´ìš´íŠ¸ì— ì¶”ê°€
 			if (!stack.isEmpty()) {
 				count += stack.size();
 			}
 
-			// ÇöÀç ¼Ò¸¦ ½ºÅÃ¿¡ Ãß°¡
+			// í˜„ì¬ ì†Œë¥¼ ìŠ¤íƒì— ì¶”ê°€
 			stack.push(cows[i]);
 		}
 

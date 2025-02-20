@@ -1,43 +1,43 @@
 const fs = require('fs');
 
-// ¹éÁØ Á¦Ãâ¿ë
+// ë°±ì¤€ ì œì¶œìš©
 // let input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 
-// ·ÎÄÃ Å×½ºÆ®¿ë: ÀÔ·Â ÆÄÀÏ °æ·Î ¼³Á¤
+// ë¡œì»¬ í…ŒìŠ¤íŠ¸ìš©: ì…ë ¥ íŒŒì¼ ê²½ë¡œ ì„¤ì •
 const filePath =
   process.platform === 'linux' ? '/dev/stdin' : __dirname + '/input.txt';
 const input = fs.readFileSync(filePath).toString().trim().split('\n');
 
-// ¹éÁØ 2630¹ø: »öÁ¾ÀÌ ¸¸µé±â
+// ë°±ì¤€ 2630ë²ˆ: ìƒ‰ì¢…ì´ ë§Œë“¤ê¸°
 const n = Number(input[0]);
 const arr2d = input.slice(1).map((line) => line.split(' ').map(Number));
 
 let white = 0;
 let blue = 0;
 
-// ÇöÀç »öÁ¾ÀÌ ¿µ¿ªÀÌ ¸ğµÎ °°Àº »öÀ¸·Î ÀÌ·ïÁ® ÀÖ´ÂÁö È®ÀÎ
+// í˜„ì¬ ìƒ‰ì¢…ì´ ì˜ì—­ì´ ëª¨ë‘ ê°™ì€ ìƒ‰ìœ¼ë¡œ ì´ë¤„ì ¸ ìˆëŠ”ì§€ í™•ì¸
 const isUniform = (arr2d, x, y, size) => {
   const color = arr2d[x][y];
   for (let i = x; i < x + size; i++) {
     for (let j = y; j < y + size; j++) {
-      // ÇÏ³ª¶óµµ ´Ù¸¥ »öÀÌ ÀÖÀ¸¸é
+      // í•˜ë‚˜ë¼ë„ ë‹¤ë¥¸ ìƒ‰ì´ ìˆìœ¼ë©´
       if (arr2d[i][j] !== color) return false;
     }
   }
   return true;
 };
 
-// ºĞÇÒ Á¤º¹ Àç±Í ÇÔ¼ö
+// ë¶„í•  ì •ë³µ ì¬ê·€ í•¨ìˆ˜
 const recur = (x, y, size) => {
   const paper = arr2d[x][y];
 
-  // isUniformÀ¸·Î °Ë»ç ÁøÇà
+  // isUniformìœ¼ë¡œ ê²€ì‚¬ ì§„í–‰
   if (isUniform(arr2d, x, y, size)) {
     if (paper === 1) blue++;
     else white++;
     return;
   }
-  // ¸ğµÎ °°Àº »öÀÌ ¾Æ´Ï¸é µÉ ¶§±îÁö ºĞÇÒ
+  // ëª¨ë‘ ê°™ì€ ìƒ‰ì´ ì•„ë‹ˆë©´ ë  ë•Œê¹Œì§€ ë¶„í• 
   else {
     const half = size / 2;
     recur(x, y, half); // 1

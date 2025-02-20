@@ -5,13 +5,13 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main_1253_G4_ÁÁ´Ù_ÀÌ¿µÁÖ {
+public class Main_1253_G4_ì¢‹ë‹¤_ì´ì˜ì£¼ {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
 		int[] arr = new int[n];
 
-		// ¼ö¿­ÀÇ ¿ø¼Ò ÀÔ·Â Ã³¸®
+		// ìˆ˜ì—´ì˜ ì›ì†Œ ì…ë ¥ ì²˜ë¦¬
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < n; i++) {
 			arr[i] = Integer.parseInt(st.nextToken());
@@ -21,17 +21,17 @@ public class Main_1253_G4_ÁÁ´Ù_ÀÌ¿µÁÖ {
 
 		int count = 0;
 
-		// ¾î¶² ¼ö°¡ ´Ù¸¥ ¼ö µÎ °³ÀÇ ÇÕÀ¸·Î ³ªÅ¸³¾ ¼ö ÀÖ´ÂÁö È®ÀÎ
+		// ì–´ë–¤ ìˆ˜ê°€ ë‹¤ë¥¸ ìˆ˜ ë‘ ê°œì˜ í•©ìœ¼ë¡œ ë‚˜íƒ€ë‚¼ ìˆ˜ ìˆëŠ”ì§€ í™•ì¸
 		for (int i = 0; i < n; i++) {
-			int temp = arr[i]; // ¾î¶² ¼ö
+			int temp = arr[i]; // ì–´ë–¤ ìˆ˜
 			int sum = 0;
 
-			// ÅõÆ÷ÀÎÅÍ ¼±¾ğ
+			// íˆ¬í¬ì¸í„° ì„ ì–¸
 			int start = 0;
 			int end = n - 1;
 
 			while (start < end) {
-				// ´õÀÌ»ó Ã£À» ¼ö ¾øÀ¸¸é ´ÙÀ½ ½Ö Ã£À¸·¯ Æ÷ÀÎÅÍ ÀÌµ¿
+				// ë”ì´ìƒ ì°¾ì„ ìˆ˜ ì—†ìœ¼ë©´ ë‹¤ìŒ ìŒ ì°¾ìœ¼ëŸ¬ í¬ì¸í„° ì´ë™
 				if (start == i) {
 					start++;
 					continue;
@@ -54,7 +54,7 @@ public class Main_1253_G4_ÁÁ´Ù_ÀÌ¿µÁÖ {
 			}
 		}
 
-		// °á°ú Ãâ·Â
+		// ê²°ê³¼ ì¶œë ¥
 		System.out.println(count);
 	}
 }
