@@ -77,6 +77,14 @@
         | [네트워크 연결](https://www.acmicpc.net/problem/1922)                                                                       | [풀이](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/Algo/src/boj/gold/1922_G4_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC_%EC%97%B0%EA%B2%B0/Main_1922_G4_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%97%B0%EA%B2%B0_Prim.java)            | [풀이](https://github.com/abyss-s/LGUplus-URECA-2nd/blob/main/4.%20Algorithm%20/Algo/src/boj/gold/1922_G4_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC_%EC%97%B0%EA%B2%B0/1922_G4_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC_%EC%97%B0%EA%B2%B0.js)                                                                                                 |
 
 5. **Backend**
+
+   1. **MySQL**
+
+      - [1) SQL 내장 함수](./5.%20Backend//sql-built-in-func.md)
+      - [2) SQL SELECT 문](./5.%20Backend//sql-select.md)
+      - [3) SQL GROUP BY 문](./5.%20Backend//sql-group-by.md)
+      - [4) SQL JOIN 문](./5.%20Backend//sql-join.md)
+
 6. **User Experience(UX/UI)**
 7. **React**
 8. **Web Security**
