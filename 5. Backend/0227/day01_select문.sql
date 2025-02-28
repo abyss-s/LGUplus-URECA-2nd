@@ -188,3 +188,13 @@ order by price desc;		-- 내림차순 정렬은 생략 불가능.
 select *
 from goods
 order by cno desc, brand;
+
+-- select empno as employNo, ename as employName, sal as salary
+-- from emp
+-- where employNo > 7500;  -- employNo 는 alias로 정의했기 때문에 where 절로 사용하면 에러 발생한다!!
+
+
+select empno as employNo, ename as employName, sal as salary
+from emp
+where empno > 7500
+order by employNo;	-- order by 절에서는 컬럼 alias를 사용할 수 있다.
