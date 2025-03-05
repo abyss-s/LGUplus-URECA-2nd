@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-SpringBootTestApplication<SpringBootTest>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.uplus.eureka.SpringBootTestApplication",
+      "projectName": "SpringBootTest",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

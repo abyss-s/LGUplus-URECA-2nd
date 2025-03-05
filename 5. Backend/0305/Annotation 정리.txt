@@ -1,0 +1,62 @@
+- Bean  등록  
+   @Component, @Repository, @Service, @Controller
+   - 클래스 선언부 위에 작성  
+   - 해당 클래스의 객체를 bean으로 등록 
+
+   @Bean
+      - cofiguration java에서 메서드의 리턴된 객체를 bean으로 등록 
+      - 메서드 선언부 위에 작성
+
+   
+@Configuration : bean 환경 설정을 java로
+    
+@Scope
+  - Bean의 life cycle 설정 
+
+Javax Annotation API 필요 (@Resource,@PostConstruct,@PreDestroy)						 
+@PostConstruct						
+  - 객체 생성 후에 호출될 메서드를 지정
+
+@PreDestroy
+  - 객체가 소멸 되기 전에 호출될 메서드를 지정
+
+
+- DI 관련 
+  @Autowired   				: 속성, 생성자, setter 메서드, 일반 메서드 위에 선언 , spring에서 지원
+  @Resouce(name="빈 이름") 	: 속성, setter 메서드 위에 선언 
+  @Inject					: 속성, 생성자, setter 메서드, 일반 메서드 위에 선언,  자바에서 지원
+
+ 
+@Qualifier("빈 이름")	: @Autowired로 주입할때 동일한 타입의 객체가 여러개 일때   name으로 구별.
+ 
+- AOP 관련 
+  @Aspect 			- 클래스를 Aspect로 설정 
+	
+  @Pointcut 		- 자주 사용하는 pointcut를 지정
+   
+  어드바이서
+  @Before,@After,@AfterReturning,@AfterThrowing,@Around
+  
+  @Transactional 	- spring에서 AOP로 트랜잭션 처리
+  
+- Web
+  @RequestMapping 	- url mapping
+     @GetMapping, @PostMapping, @PutMapping, @DeleteMapping
+     
+     
+  @RequestParam 	- String, Primitive, Map에대한 요청 데이타 지정
+  @ModelAttribute 	- DTO에대한 요청 데이타 지정
+  
+  @ExceptionHandler - error 처리하는 함수 선언
+  @ControllerAdvice - error 처리하는 class 선언
+  
+  @PathVariable 	- 비동기 통신으로 전달된 get, delete 방식의 요청 데이타를 url에서 추출해 올때 지정
+  @RequestBody 		- 비동기 통신으로 전달된 put, post 방식의  요청 데이타 추출
+      
+  @ResponseBody 	- 응답을 특정 url로 이동하지 않고 직접 출력
+  @RestController 	- Rest Ful Api를 위한 Controller 선언 
+  
+- spring boot
+  @SpringBootApplication   - spring boot를 실행
+  @Component(basePackages='') - base package 설정
+  @MapperScan(basePackages = { "com.ssafy.**.model.dao" }) - mybatis Mapper에 대한 basePackages 설정
