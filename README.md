@@ -90,6 +90,12 @@
        - [2) SQL SELECT 문](./5.%20Backend//sql-select.md)
        - [3) SQL GROUP BY 문](./5.%20Backend//sql-group-by.md)
        - [4) SQL JOIN 문](./5.%20Backend//sql-join.md)
+       - [5) SQL 서브쿼리](./5.%20Backend//sql-subquery.md)
+       - [6) SQL DDL 문](./5.%20Backend//sql-ddl.md)
+       - [7) SQL DML 문](./5.%20Backend//sql-dml.md)
+
+    2. **SpringBoot**
+       - [1) 스프링부트 기초 및 설정](./5.%20Backend/springboot-intro.md)
 
 6.  **User Experience(UX/UI)**
 7.  **React**
