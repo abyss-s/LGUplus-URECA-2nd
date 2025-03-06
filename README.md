@@ -95,7 +95,10 @@
        - [7) SQL DML 문](./5.%20Backend//sql-dml.md)
 
     2. **SpringBoot**
-       - [1) 스프링부트 기초 및 설정](./5.%20Backend/springboot-intro.md)
+
+       - [1) SpringBoot 기초 및 설정](5.%20Backend/springboot-intro.md)
+       - [2) SpringBoot Annotation](5.%20Backend//springboot-annotation.md)
+       - [3) RESTFul 요청](5.%20Backend//restful.md)
 
 6.  **User Experience(UX/UI)**
 7.  **React**
