@@ -27,7 +27,7 @@ public class PageUtility {
      * @param totalrowcount   조회해온 데이터의 전체 row수
      * @param currentpagecount 현재 페이지 
      * @param imagepath        이미지 경로 
-     * @exception Exception
+     * @exception java.lang.Exception
      */
     public PageUtility(int displayrowcount, int totalrowcount, int currentpagecount, String imagepath)
     {
