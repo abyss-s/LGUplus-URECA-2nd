@@ -34,8 +34,11 @@ public class BookServiceImpl implements BookService {
 	@Override
 	public void update(Book book) {
 		try {
+			Book find = dao.search(book.getIsbn());
+			if(find==null)
+				throw new BookException("등록되지 않은 책 정보를 수정할 수 없습니다.");
 			dao.update(book);
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			throw new BookException("책 정보 수정 중 오류 발생");
 		}
 	}
@@ -68,6 +71,10 @@ public class BookServiceImpl implements BookService {
 	@Override
 	public void remove(String isbn) {
 		try {
+			Book book = dao.search(isbn);
+			if(book == null) {
+				throw new BookException("등록되지 않은 책 정보를 지울 수 없습니다.");
+			}
 			dao.remove(isbn);
 		} catch (Exception e) {
 			e.printStackTrace();
