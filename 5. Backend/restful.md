@@ -11,6 +11,8 @@ MVC 패턴은 애플리케이션을 세 가지 주요 컴포넌트로 분리합�
 2. **View**: 사용자에게 데이터를 표현합니다. RESTful API에서는 주로 JSON 형식의 응답이 View 역할을 합니다[1].
 3. **Controller**: 사용자 요청을 받아 처리하고, 적절한 응답을 반환합니다
 
+<img width="1244" alt="image" src="https://github.com/user-attachments/assets/7aae56d3-506e-4312-9524-3dca1476dc97" />
+
 ### DAO, DTO, Service
 
 - **DAO (Data Access Object)**: 데이터베이스와 직접 상호작용하는 객체입니다.
@@ -72,3 +74,8 @@ RESTful API에서 주로 사용되는 HTTP 메소드는 다음과 같습니다:
 | PUT    | 리소스 수정      | `/products/12345`              |
 | DELETE | 리소스 삭제      | `/products/12345`              |
 | PATCH  | 리소스 부분 수정 | `/users/123`                   |
+
+### 강사님 보충자료 
+![image](https://github.com/user-attachments/assets/4443d70f-70f9-43d5-a2a6-5907d4f83c73)
+
+
