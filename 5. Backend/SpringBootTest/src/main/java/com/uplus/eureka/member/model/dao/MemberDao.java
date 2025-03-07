@@ -17,5 +17,5 @@ public interface MemberDao {
 	Member search(String id) throws SQLException;
 	void regist(Member user) throws SQLException;
 	void update(Member user) throws SQLException;
-	void remove(Member id) throws SQLException;
+	void remove(String id) throws SQLException;
 }
