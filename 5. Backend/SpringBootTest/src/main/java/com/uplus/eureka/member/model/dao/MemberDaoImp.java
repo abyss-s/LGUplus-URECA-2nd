@@ -69,14 +69,41 @@ public class MemberDaoImp implements MemberDao {
 		}
 	}
 
-	@Override
-	public void update(Member user) throws SQLException {
-
+//	@Override
+//	public void update(Member user) throws SQLException {
+//
+//	}
+@Override
+public void update(Member user) throws SQLException {
+	Connection con = null;
+	PreparedStatement stmt = null;
+	try {
+		con = ds.getConnection();
+		String sql = "UPDATE members SET name = ?, password = ? WHERE id = ?";
+		stmt = con.prepareStatement(sql);
+		int idx = 1;
+		stmt.setString(idx++, user.getName());
+		stmt.setString(idx++, user.getPassword());
+		stmt.setString(idx++, user.getId());
+		stmt.executeUpdate();
+	} finally {
+		util.close(stmt, con);
 	}
+}
+
 
 	@Override
-	public void remove(Member id) throws SQLException {
-
+	public void remove(String id) throws SQLException {
+		Connection con = null;
+		PreparedStatement stmt = null;
+		try {
+			con = ds.getConnection();
+			String sql = "DELETE FROM members WHERE id = ?";
+			stmt = con.prepareStatement(sql);
+			stmt.setString(1, id);
+			stmt.executeUpdate();
+		} finally {
+			util.close(stmt, con);
+		}
 	}
-
 }
