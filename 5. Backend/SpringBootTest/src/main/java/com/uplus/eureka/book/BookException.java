@@ -1,6 +1,6 @@
 package com.uplus.eureka.book;
 
-import com.uplus.eureka.EurekaException;
+import com.uplus.eureka.advice.EurekaException;
 
 public class BookException extends EurekaException {
   public BookException(String message) {
