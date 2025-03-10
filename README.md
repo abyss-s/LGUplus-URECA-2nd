@@ -99,6 +99,8 @@
        - [1) SpringBoot 기초 및 설정](5.%20Backend/springboot-intro.md)
        - [2) SpringBoot Annotation](5.%20Backend//springboot-annotation.md)
        - [3) RESTFul 요청](5.%20Backend//restful.md)
+       - [4) MySQL과 SpringBoot 연동 및 Postman 테스트](https://tomymoon.tistory.com/210)
+       - [5) MyBatis와 SpringBoot 연동 및 Mapper 문 작성법](5.%20Backend//restful.md)
 
 6.  **User Experience(UX/UI)**
 7.  **React**
