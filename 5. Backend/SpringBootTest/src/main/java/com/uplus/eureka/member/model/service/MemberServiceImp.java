@@ -2,9 +2,6 @@ package com.uplus.eureka.member.model.service;
 
 import java.sql.SQLException;
 
-import com.uplus.eureka.book.model.dto.Book;
-import com.uplus.eureka.book.model.dto.BookException;
-import com.uplus.eureka.member.model.dao.MemberDaoImp;
 import org.springframework.stereotype.Service;
 
 import com.uplus.eureka.member.model.dao.MemberDao;
@@ -14,13 +11,14 @@ import com.uplus.eureka.member.model.dto.MemberException;
 @Service
 public class MemberServiceImp implements MemberService {
 
-	private final MemberDaoImp memberDaoImp;
+//	private final MemberDaoImp memberDaoImp;
 	private MemberDao dao;
 
-	public MemberServiceImp(MemberDao dao, MemberDaoImp memberDaoImp) {
+	 public MemberServiceImp(MemberDao dao) {
+	//public MemberServiceImp(MemberDao dao, MemberDaoImp memberDaoImp) {
 		super();
 		this.dao = dao;
-		this.memberDaoImp = memberDaoImp;
+//		this.memberDaoImp = memberDaoImp;
 	}
 
 	public Member login(String id, String pass) {
@@ -28,7 +26,9 @@ public class MemberServiceImp implements MemberService {
 			Member user = dao.search(id);
 			System.out.println(user);
 			if (user == null) throw new MemberException("등록되지 않은 아이디입니다.");
-
+			if(user.getWithdraw().equals("Y")){
+				throw new MemberException("탈퇴한 아이디입니다.");
+			}
 			if (!pass.equals(user.getPassword()))
 				throw new MemberException("비밀 번호 오류 발생!!!!");
 			return user;
@@ -45,6 +45,9 @@ public class MemberServiceImp implements MemberService {
 			Member member = dao.search(id);
 			if (member == null) {
 				throw new MemberException("요청한 멤는은 등록되지 않은 멤버 정보입니다.");
+			}
+			if(member.getWithdraw().equals("Y")){
+				throw new MemberException("이미 탈퇴한 아이디입니다.");
 			}
 			return member;
 		} catch (SQLException e) {

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.uplus.eureka.member.model.dao.MemberDao">
+    <select id="search" parameterType="String" resultType="Member">
+        SELECT *
+        FROM members
+        WHERE id = #{id}
+    </select>
+
+    <insert id="regist" parameterType="Member">
+        INSERT INTO members (id, password, name, email, address, phone, withdraw)
+        VALUES (#{id}, #{password}, #{name}, #{email}, #{address}, #{phone}, #{withdraw})
+    </insert>
+
+    <update id="update" parameterType="Member">
+        UPDATE members
+        SET password = #{password},
+            name = #{name},
+            email = #{email},
+            address = #{address},
+            phone = #{phone},
+            withdraw = #{withdraw}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="remove" parameterType="String">
+        DELETE FROM members
+        WHERE id = #{id}
+    </delete>
+
+</mapper>

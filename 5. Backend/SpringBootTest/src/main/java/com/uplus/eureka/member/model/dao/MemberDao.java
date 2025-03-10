@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 import com.uplus.eureka.member.model.dto.Member;
 
+@Mapper
 public interface MemberDao {
 	/**
 	 * 입력된 id/pass 기반으로 User를 조회해서 반환한다.

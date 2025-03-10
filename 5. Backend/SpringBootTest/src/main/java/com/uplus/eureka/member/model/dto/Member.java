@@ -10,6 +10,7 @@ public class Member implements Serializable {
 	private String email;
 	private String address;
 	private String phone;
+	private String withdraw; // col 추가
 	
 	public Member() {}
 	public String getId() {
@@ -55,5 +56,13 @@ public class Member implements Serializable {
 				.append(", email=").append(email).append(", address=").append(address).append(", phone=").append(phone)
 				.append("]");
 		return builder.toString();
+	}
+
+	public String getWithdraw() {
+		return withdraw;
+	}
+
+	public void setWithdraw(String withdraw) {
+		this.withdraw = withdraw;
 	}
 }

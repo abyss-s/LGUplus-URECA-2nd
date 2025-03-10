@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace는 패키지 포함한 mapper(DAO interface) 이름으로 설정 한다. -->
+<mapper namespace="com.uplus.eureka.book.model.dao.BookDao">
+
+	<!-- 자주 사용하는 쿼리를 상용구 처럼 sql 태그를 이용해서 등록해서 재사용할 수 있다. -->
+
+
+	<!--	id : mapping될 함수 이름으로 설정 
+			parameterType : 메서드 인자 타입 
+			resultType : 쿼리를 수행한 결과(컬럼 데이타)를 담을 클래스 타입 -->
+	
+
+</mapper>
+
+

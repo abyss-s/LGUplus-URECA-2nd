@@ -13,16 +13,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.ContextConfiguration;
 
-import com.uplus.eureka.member.model.dao.MemberDaoImp;
-
 @SpringBootTest(
 		properties = {"spring.config.location=classpath:application.properties"}
 )
 /*
-*
-* Spring Boot 3.x에서는 @SpringBootTest만으로 Bean 설정이 자동 감지되지 않을 수도 있습니다.
-*  @ContextConfiguration을 사용하여 명시적으로 설정 파일을 지정해 보세요.
-*/
+ *
+ * Spring Boot 3.x에서는 @SpringBootTest만으로 Bean 설정이 자동 감지되지 않을 수도 있습니다.
+ *  @ContextConfiguration을 사용하여 명시적으로 설정 파일을 지정해 보세요.
+ */
 @ContextConfiguration(classes = SpringBootTestApplication.class)  // 설정 클래스를 명시적으로 지정
 @ComponentScan(basePackages = {"com.uplus.eureka"})
 class SpringBootTestApplicationMemberTests {
