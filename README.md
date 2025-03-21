@@ -121,7 +121,10 @@
 
 ## 💻 Projects
 
-- 미니 프로젝트1
-- 미니 프로젝트2
-- 종합 프로젝트
-- 최종 융합 프로젝트
+### 미니프로젝트
+
+[Giuhub](https://github.com/Ureca-Mini-Project-Team4/Oh-no-its-me)
+
+### 종합 프로젝트
+
+### 최종 융합 프로젝트
