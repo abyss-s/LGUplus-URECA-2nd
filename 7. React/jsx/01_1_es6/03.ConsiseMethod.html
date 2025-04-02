@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*
+            consise method
+            - 간결한 메서드 선언 
+            - 객체의 메서드를 선언할 때 간결하게 선언할 수 있다. 
+            [객체의 메서드 기존 방법]
+            메서드이름: function(){}
+
+            [consise method]
+            메서드 이름(){ }
+        */
+
+        //기존 객체에 함수 선언 
+        const user = {
+            id: 'ssafy',
+            name: '김싸피',
+            age: 7,
+            info: function () {
+                console.log('user info:', this.id, ' ', this.name, ' ', this.age)
+            }
+        }
+        //consise method
+        
+        //user.info();
+        //user2.info();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

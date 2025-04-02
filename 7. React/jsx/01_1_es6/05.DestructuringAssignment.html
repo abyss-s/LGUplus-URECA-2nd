@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        const user = {
+            id: 'ssafy',
+            name: '김싸피',
+            age: 7
+        }
+
+        /* 객체의 속성 값을 변수에 할당할 때 기존 방법 
+              변수명 = 객체명.속성명
+        */
+        {
+            let id = user.id
+            let name = user.name
+            let age = user.age
+            console.log(id, name, age)
+        }
+
+        /* Destructuring Assignment
+            - 배열이나 객체에 입력된 값을 개별적인 변수에 할당할 때
+              간편한 방식을 제공
+            - 객체의 속성과 동일한 이름의 변수에 할당
+            - 배열은 순서대로 변수에 할당 
+            - 형식  {변수명, 변수명} = 객체
+
+         */
+       
+
+        const area = ['서울', '대전', '구미', '부울경', '광주']
+
+        //배열의 값으 변수에 할당할 때 기존 방식
+        {
+            let a1 = area[0];
+            let a2 = area[1];
+            let a3 = area[2];
+            let a4 = area[3];
+            let a5 = area[4];
+            console.log(a1, a2, a3, a4, a5)
+        }
+        //배열 Destructuring Assignment
+       
+
+        //객체를 리턴하는 함수 
+        function getUser() {
+            return {
+                id: 'ssafy',
+                name: '김싸피',
+                age: 7
+            }
+        }
+
+        //기존 방식
+        {
+            let user = getUser();
+            let id = user.id
+            let name = user.name
+            let age = user.age
+            console.log(id, name, age)
+        }
+
+        //Destructuring Assignment
+        {
+           
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

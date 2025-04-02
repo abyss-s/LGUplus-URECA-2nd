@@ -1,0 +1,34 @@
+
+1. 폴더 생성 및 초기화
+npm init -y// pakage.json 파일 초기화
+
+
+2. 리액트 핵심 패키지들(애플리케이션 동작과 연관된) 설치(dependencies)
+npm install react react-dom 
+
+- package.json script 기본 설정
+ "scripts": {
+    "dev": "webpack serve --mode development --open --hot",
+    "build": "webpack --mode production"
+  },
+  
+  
+3.  개발에 필요한 라이브러리들(애플리케이션 동작과는 직접연관이 없지만 개발할 때 필요한)설치(devDependencies)
+바벨(Babel) 설치  
+  
+npm install @babel/core @babel/preset-react @babel/preset-env -D
+
+-  babel.config.js  설정 
+
+4. 웹팩(Web pack) 설치
+npm install webpack webpack-cli webpack-dev-server -D
+
+
+5. 로더 설치
+npm install babel-loader style-loader css-loader file-loader -D
+
+6. 플러그인 설치
+npm install html-webpack-plugin clean-webpack-plugin -D
+
+7. 웹팩 설정
+제공한 webpack.config.js 파일을 루트 경로에 복사한다.  

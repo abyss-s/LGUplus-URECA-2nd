@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        const func1 = function () {
+            console.log('익명함수')
+        }
+        func1();
+
+        /*
+            Arrow function
+            - 함수 축약형, lambda
+            형식]
+            (인자) => {}         //인자가 없거나, 인자가 2개 이상일 때
+            인자 => {}           //인자가 1개일 때
+
+            statement 
+            {}                   //2줄 이상일 때 작성 
+                                 //1줄 일때 {}를 생략하면 되고 수행 결과가 return 된다. 
+
+        */
+
+        const func2 = () => { console.log('Arrow function') }
+        func2();
+
+        const func3 = (num) => { console.log('Arrow function...인자', num) }
+        func3(10);
+        const func4 = num => { console.log('Arrow function...인자', num) }
+        func4(10);
+
+
+        const func5 = num => { return num * 10 }
+        console.log('결과 ', func5(10));
+
+        const arr = [5, 2, 7, 1, 9, 10]
+        arr.sort((num1, num2) => { return num1 - num2 })
+        console.log(arr)
+
+        arr.sort((num1, num2) => { return num2 - num1 })
+        console.log(arr)
+
+        const arr2 = arr.filter((num) => { return num > 5 })
+        console.log(arr2)
+
+
+        const user = {
+            id: 'ssafy',
+            name: '김싸피',
+            age: 7,
+            info() {
+                console.log(this, ' ', this.id, ' ', this.name, ' ', this.age)
+            }
+        }
+        user.info();
+
+        const user2 = {
+            id: 'ssafy',
+            name: '김싸피',
+            age: 7,
+            info: () => {
+                console.log(this, ' ', this.id, ' ', this.name, ' ', this.age)
+            }
+        }
+        user2.info();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

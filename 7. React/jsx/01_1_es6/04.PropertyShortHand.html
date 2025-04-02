@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /* 기존의 속성 표현   {속성명 : 값, ....} */
+        let id = 'ssafy';
+        let name = '김싸피';
+        let age = 7;
+
+        let user = {
+            id: id,
+            name: name,
+            age: age,
+            info() {
+                console.log('user info:', this.id, ' ', this.name, ' ', this.age)
+            }
+        }
+
+        /* property shorthand   : 변수명과 속성명이 같을 때 사용하기 
+            {
+                js변수명, ...
+            }
+        */
+
+        // user.info();
+        // user2.info();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

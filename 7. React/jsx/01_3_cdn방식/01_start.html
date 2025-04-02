@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!--Root DOM :  react에 의해 렌더링될 대상 -->
+    <div id="root"></div>
+  </body>
+
+  <!-- This setup is not suitable for production. -->
+  <!-- Only use it in development! -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script async src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"></script>
+  
+  <!-- 
+    React를 CDN 방식으로 사용할 때, 위의 importmap을 활용하면 ES 모듈 방식으로 React를 가져올 수 있다. 
+    -->
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react?dev",
+        "react-dom/client": "https://esm.sh/react-dom/client?dev"
+      }
+    }
+  </script>
+  <!-- Babel이 JSX를 변환할 수 있도록 설정합니다.  -->
+  <script type="text/babel" data-type="module">
+
+    /*
+    JSX 태그는 자식을 포함할 수 있다. 
+    형식 ]  (
+            <root태그>
+              <자식태그/>
+              <자식태그/>
+            </root태그>
+            )
+     */
+    
+
+    /* 
+    1. react 객체 생성 
+    Root DOM에 랜더링할 ReactDOM 객체를 생성하는 함수 
+    ReactDOM.createRoot(root)
+	*/
+    
+
+    /*
+    2. 화면 표시할 내용
+    root.render(화면)
+    or  
+    ReactDOM.render(화면, root)
+  
+    <StrictMode>를 통해 개발 중에 컴포넌트에서 일반적인 버그를 빠르게 찾을 수 있도록 한다. 
+    <StrictMode>
+      <App />
+    </StrictMode>
+	*/
+
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    h4 {
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    h5 {
+      margin-top: 0;
+      font-size: 14px;
+    }
+
+    h6 {
+      margin-top: 0;
+      font-size: 12px;
+    }
+
+    code {
+      font-size: 1.2em;
+    }
+
+    ul {
+      padding-inline-start: 20px;
+    }
+  </style>
+</html>
