@@ -108,6 +108,7 @@
     1. **리액트 기초**
 
        - [1) 리액트 시작](7.%20React/1.react-intro.md)
+       - [2) 리액트 컴포넌트와 상태 관리](7.%20React/2.react-comp-state.md)
 
 8.  **Web Security**
 9.  **Software design**
