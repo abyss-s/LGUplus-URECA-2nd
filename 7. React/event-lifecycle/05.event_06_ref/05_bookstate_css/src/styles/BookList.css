@@ -1,0 +1,11 @@
+.book-table {
+  width: 50%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.book-header {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  text-align: center;
+}

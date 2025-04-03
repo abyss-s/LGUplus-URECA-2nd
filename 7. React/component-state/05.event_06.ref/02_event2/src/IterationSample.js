@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 
 const IterationSample = () => {
   /*
@@ -16,7 +16,22 @@ const IterationSample = () => {
     없다면 index를 사용하기 
   */
 
-  return <ul></ul>;
+  const [name, setName] = useState(['눈사람', '얼음', '눈', '바람', '꽃', '꽃망울']);
+  const [inputText, setInputText] = useState('');
+  const [nextId, setNextId] = useState(7);
+
+  const handleRemove = (index) => {
+    const newNameList = name.filter((_, i) => i !== index);
+    setName(newNameList);
+  };
+
+  const nameList = name.map((name, i) => (
+    <li key={name} onClick={() => handleRemove(i)}>
+      {name}
+    </li>
+  ));
+
+  return <ul>{nameList}</ul>;
 };
 
 export default IterationSample;

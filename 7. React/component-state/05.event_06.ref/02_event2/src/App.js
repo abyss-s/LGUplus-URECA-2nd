@@ -1,8 +1,8 @@
-import "./App.css";
-import IterationSample from "./IterationSample1";
+import './App.css';
+import IterationSample from './IterationSample';
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <IterationSample />
     </div>
   );
