@@ -1,0 +1,62 @@
+.container {
+  padding: 24px;
+  background-color: pink;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #1e40af;
+  margin-bottom: 16px;
+}
+
+.user-list {
+  list-style-type: none;
+  padding: 0;
+  background-color: white;
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-item {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  transition: background 0.2s;
+}
+
+.user-item:last-child {
+  border-bottom: none;
+}
+
+.user-item:hover {
+  background-color: #f9fafb;
+}
+
+.user-name {
+  font-weight: 500;
+  color: #374151;
+}
+
+.user-email {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #6b7280;
+}
+
+.error {
+  text-align: center;
+  font-size: 18px;
+  color: #dc2626;
+  font-weight: bold;
+}
