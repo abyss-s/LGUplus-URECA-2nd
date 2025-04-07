@@ -1,15 +1,12 @@
-import "./App.css";
-import Average1 from "./Average1";
-import Average2 from "./Average2";
-import Average3 from "./Average3";
+import './App.css';
+import Average from './Average';
+import Average2 from './Average2';
 function App() {
   return (
-    <div className="App">
-      <Average1 />
+    <div className='App'>
+      <Average />
       <hr />
       <Average2 />
-      <hr />
-      <Average3 />
     </div>
   );
 }
