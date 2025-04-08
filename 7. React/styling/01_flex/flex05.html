@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        width: 500px;
+        background: gray;
+        flex-flow: row nowrap;
+        height: 500px;
+        /* flex-direction: column; */
+        /* flex-direction: row; */
+
+        /* 
+            정렬 : 
+            justify-content: 메인 축 방향 정렬  
+            align-items : cross 축 방향 정렬
+        */
+
+        /* 아이템을 시작점으로 정렬  flex-direction이 row일때 왼쪽, column일때는 위 */
+        /* justify-content: flex-start; */
+
+        /* 아이템들을 끝점으로 정렬 flex-direction이 row일 때는 오른쪽, column일때는 아래 */
+        /* justify-content: flex-end; */
+
+        /* 아이템들을 가운데로 정렬 */
+        /* justify-content: center; */
+
+        /* 아이템들의 “사이(between)”에 균일한 간격을 제공 */
+        /* justify-content: space-between; */
+
+        /* 아이템들의 “둘레(around) 좌우 or 상하”에 균일한 간격제공
+               (컨테이너크기 - 아이템들의크기)/아이템개수/2
+            */
+        /* justify-content: space-around; */
+
+        /* 아이템들의 사이와 양 끝에 균일한 간격을 제공
+               (컨테이너크기 - 아이템들의크기)/(아이템수+1)
+            */
+        justify-content: space-evenly;
+
+        /* 아이템들이 수직축 방향으로 끝까지 쭈욱 늘어납니다. */
+        align-items: stretch;
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+        /* align-items: center; */
+        /* align-items: baseline; */
+      }
+      div {
+        width: 100px;
+        height: 100px;
+      }
+      .hello {
+        background: green;
+        height: 50px;
+      }
+      .ureca {
+        background: orange;
+      }
+      .world {
+        width: 200px;
+        background: pink;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--flex container-->
+    <div class="container">
+      <!--flex item-->
+      <div class="item hello">helloflex</div>
+      <div class="item ureca">ureka</div>
+      <div class="item world">worldflex</div>
+    </div>
+  </body>
+</html>

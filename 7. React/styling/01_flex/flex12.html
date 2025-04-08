@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        width: 1024px;
+        height: 500px;
+        margin: 0 auto;
+      }
+
+      /*flex : <flex-grow> <flex-shrink> <flex-basis> 
+        flex : 1   =>  flex: 1 1 0%;
+        flex-grow: 1	부모가 가진 여유 공간을 1배 비율로 가져라
+        flex-shrink: 1	공간이 줄어들면 1배 비율로 줄어들 수 있다
+        flex-basis: 0%	기본 크기는 0 (즉, 전체 공간을 나눠서 배분)
+        */
+      .box {
+        flex: 1;
+        border: 1px solid black;
+      }
+      /* .a {
+        flex: 1;
+      }
+      .b {
+        flex: 2;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box a">A</div>
+      <div class="box b">B</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+.button {
+  color: white;
+  background: blue;
+  font-size: 16px;
+
+  //1. &를 사용하여 중첩된 선택자가 부모 선택자를 참조하기
+  &:hover {
+    background-color: darkblue;
+  }
+
+  //2. 부모 선택자를 유지하면 미디어 쿼리 적용하기
+  @media (max-width: 600px) {
+    & {
+      font-family: 16px;
+    }
+  }
+}
+
+//3. 부모 선택자와 연결된 새로운 클래스명을 만들기
+.card {
+  &-header {
+    font-size: 20px;
+  }
+  &-body {
+    font-size: 16px;
+  }
+}
+
+//4. 부모 선택자가 포함된 구조를 만들기
+.icon {
+  &.large {
+    width: 50px;
+    height: 50px;
+  }
+}

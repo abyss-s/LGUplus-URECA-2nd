@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 500px;
+            background: gray;
+            flex-flow: row nowrap;
+            height: 500px;
+            /* flex-direction: column; */
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            /* 
+            정렬 : 
+            align-items : cross 축 방향 정렬
+            */
+
+            /* 아이템들이 수직축 방향으로 컨테이너크기와 같게 stretch
+               단, 해당 item의 크기를 지정하면 지정한 크기대로 표시된다. 
+            */
+            /* align-items: stretch; */
+            align-items: flex-start;
+            /* align-items: flex-end; */
+            /* align-items: center; */
+            /* align-items: baseline; */
+        }
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        .hello{
+            background: green;
+            height: 50px;
+        }
+        .ureca{
+            background: orange;
+        }
+        .world{
+            width: 200px;
+            background: pink;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--flex container-->
+    <div class="container">
+        <!--flex item-->
+        <div class="item hello">helloflex</div>
+        <div class="item ureca">ureka</div>
+        <div class="item world">worldflex</div>
+    </div>
+</body>
+</html>

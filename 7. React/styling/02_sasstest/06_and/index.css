@@ -1,0 +1,24 @@
+.button {
+  color: white;
+  background: blue;
+  font-size: 16px;
+}
+@media (max-width: 600px) {
+  .button {
+    font-size: 14px;
+  }
+}
+
+.card-header {
+  font-size: 20px;
+}
+.card-body {
+  padding: 15px;
+}
+
+.icon.large {
+  width: 50px;
+  height: 50px;
+}
+
+/*# sourceMappingURL=index.css.map */

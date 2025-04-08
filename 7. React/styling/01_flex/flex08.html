@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        width: 500px;
+        background: gray;
+        flex-flow: row wrap;
+        height: 100px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+      }
+      .item {
+        /* 
+             flex-basis는 Flex 아이템의 기본 크기를 설정
+             flex-direction row일 때는 너비, column일 때는 높이에 대한 설정
+            */
+
+        /* auto는 기본 값이며 item의  width, height를 유지
+               item에 width, height가 지정되어 있지 않는 경우 item content 크기에 fit
+            */
+        flex-basis: auto;
+
+        /* 0으로 설정하면 
+               width, height가 설정 없는 경우 : item content 크기에 fit
+               width, height가 설정되어 있는 경우
+                content가 지정한 크기보다 작은 경우  : item content 크기에 fit
+                content가 지정한 크기보다 큰 경우 : 지정한 크기로 표시  
+               */
+        /* flex-basis: 0; */
+
+        /* % : 컨테이너 크기의 %로 표시됨
+               지정한 크기는 무시됨.
+            */
+        /* flex-basis: 50%; */
+
+        /* 
+                px로 크기 지정
+                item에 크기가 설정된 경우 
+                    content가 지정한 크기보다 작은 경우  : flex-basis로 지정한 크기
+                    content가 지정한 크기보다 큰 경우    : item 크기 
+
+                item에 크기가 설정되지 않은 경우
+                    content가 지정한 크기보다 작은 경우  : flex-basis로 지정한 크기
+                    content가 지정한 크기보다 큰 경우    : item의 컨텐츠에 fit
+            */
+        /* flex-basis: 50px; */
+        /* flex-basis: 10rem; */
+
+        /* content 크기에 fit */
+        /* flex-basis: content; */
+      }
+      div {
+        width: 100px;
+        /* height: 100px; */
+      }
+      .hello {
+        background: green;
+        /* height: 50px; */
+      }
+      .ureca {
+        background: orange;
+      }
+      .world {
+        /* width: 200px; */
+        background: pink;
+        /* height: 200px; */
+      }
+    </style>
+  </head>
+  <body>
+    <!--flex container-->
+    <div class="container">
+      <!--flex item-->
+      <div class="item hello">helloflex!!!!!!!!!</div>
+      <div class="item ureca">ureka</div>
+      <div class="item world">worldflex</div>
+    </div>
+  </body>
+</html>

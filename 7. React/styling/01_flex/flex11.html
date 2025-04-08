@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        width: 300px;
+        border: 1px solid #aaa;
+      }
+
+      .box {
+        padding: 20px;
+        font-weight: bold;
+        background: lightblue;
+        margin: 5px;
+        width: 200px;
+        /* min-width: 200px; */
+      }
+
+      /* flex-shrink
+        부모 요소의 공간이 부족할 때, 해당 flex item이 얼마나 줄어들 수 있는지를 설정하는 속성 
+        기본값은 1  :공간이 부족하면 줄어들 수 있음
+        0 :줄어들지 않고 크기 유지
+        */
+      .shrink1 {
+        /* 줄어들 수 있음 */
+        flex-shrink: 1;
+        background: lightcoral;
+      }
+
+      .shrink0 {
+        /* 크기 유지 */
+        flex-shrink: 0;
+        background: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box shrink1">Shrink 1</div>
+      <div class="box shrink0">Shrink 0</div>
+    </div>
+  </body>
+</html>

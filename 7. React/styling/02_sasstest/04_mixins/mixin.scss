@@ -1,0 +1,40 @@
+/*
+재사용 가능한 스타일의 그룹을 정의하는 사용. 
+선언 형식]  @mixin 이름 { }
+사용 형식]  @include 이름;    -- 해당 mixin이 상용구처럼 추가된다. 
+
+
+-함수 형식 ] 인자를 전달 받아 유연한 스타일링을 할 수 있다. 
+@mixin 이름($인자){
+  속성:$인자
+}
+
+@include 이름(값);           //인자가 여러개 일때 인자는 순서대로 전달
+
+@include 이름($인자명:값);    //인자가 여러개 일때 인자는 이름 기반으로 인자 전달
+*/
+
+@mixin theme($theme: Darkgrey) {
+  background-color: $theme;
+  box-shadow: 5px 5px 1px rgba($theme, 0.25);
+  color: white;
+}
+
+@mixin box {
+  height: 50px;
+  width: 100px;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+// cascasding
+.info {
+  @include theme; // 인자가 없으므로 디폴트값인 Darkgrey
+  @include box;
+  color: #ccc;
+}
+
+.alert {
+  @include theme($theme: DarkGreen);
+  @include box;
+}

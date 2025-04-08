@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 500px;
+            background: gray;
+            flex-direction: row;
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            height: 300px;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        .hello{
+            background: green;
+            height: 50px;
+        }
+        .ureca{
+            background: orange;
+        }
+        .world{
+            background: pink;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--flex container-->
+    <div class="container">
+        <!--flex item-->
+        <div class="item hello">helloflex</div>
+        <div class="item ureca">ureka</div>
+        <div class="item world">worldflex</div>
+    </div>
+</body>
+</html>

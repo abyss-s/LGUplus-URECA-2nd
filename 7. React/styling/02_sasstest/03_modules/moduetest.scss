@@ -1,0 +1,17 @@
+/*
+파일 분리와 임포트(Partials & Import)
+.scss 파일을 여러 파일로 나누고 필요한 곳에서 임포트하는 기능
+부분 파일 이름은 _로 시작하고, import 할때는 생략한다. 
+
+***  _(언더스코어)로 시작하는 파일 이름
+독립적이지 않음 : stand alone으로 컴파일 되지 않는 것을 의미. 다른 SCSS 파일에 import되어 사용될 목적으로 만들어진다
+
+형식] import 'url';
+*/
+
+@use 'base';
+
+.inverse {
+  height: 200px;
+  background-color: base.$primary-color;
+}

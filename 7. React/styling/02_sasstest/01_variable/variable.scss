@@ -1,0 +1,17 @@
+/*
+
+변 수(Variables)
+CSS의 값을 저장하고 재사용하는 방법
+주로 중복해서 사용하는 font-family와 베이스 color 들을 변수로 지정한다. 
+선언 형식] $변수명 : 값;
+사용 형식] 속성: $변수명;
+
+*/
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}

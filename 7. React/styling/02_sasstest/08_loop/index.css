@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/*
+변수명 : 변수 값을 클래스명이나 속성 값에 동적으로 적용
+*/
+.btn-1 {
+  font-size: 4px;
+}
+.btn-2 {
+  font-size: 8px;
+}
+.btn-3 {
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=index.css.map */
