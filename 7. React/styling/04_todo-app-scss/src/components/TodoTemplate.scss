@@ -1,0 +1,19 @@
+@use '../style/base' as base;
+
+.TodoTemplate {
+  max-width: 512px;
+  max-height: 421px;
+  margin: 0 auto;
+  margin-top: 6rem;
+  background-color: base.$netural-color;
+}
+
+.app-title {
+  background-color: base.$primary-color;
+  padding: 1rem 0;
+  color: base.$netural-color;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

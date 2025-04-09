@@ -1,0 +1,35 @@
+@use '../style/base' as base;
+
+.insert {
+  display: flex;
+  flex-direction: row;
+  max-width: 512px;
+  color: base.$netural-color;
+}
+
+input {
+  background-color: base.$secondary-color;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: base.$netural-color;
+  &::placeholder {
+    color: base.$netural-color;
+  }
+  flex: 1;
+}
+
+button {
+  background-color: base.$basic-button-color;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 0 0.75rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.1s background-color ease-in;
+}

@@ -1,0 +1,41 @@
+@use '../style/base' as base;
+
+.item-containter {
+  background-color: base.$netural-color;
+  &:nth-child(even) {
+    background-color: base.$netural-color-even;
+  }
+}
+
+.item {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  .check {
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+
+    .text {
+      padding-left: 0.8rem;
+      flex: 1;
+    }
+
+    &.checked {
+      svg {
+        color: base.$primary-color;
+      }
+      .text {
+        color: base.$basic-change-color;
+        text-decoration: line-through;
+      }
+    }
+  }
+  .point {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: base.$point-color;
+    cursor: pointer;
+  }
+}
