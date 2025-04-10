@@ -1,0 +1,22 @@
+$primary-color: #22b8cf;
+$secondary-color: #495057;
+$netural-color: white;
+$basic-button-color: #868e96;
+$basic-change-color: #adb5bd;
+$body-font-size: 18px;
+$title-font-size: 25px;
+$basic-padding: 5px;
+$basic-height: 35px;
+
+@mixin myBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin ibutton {
+  @include myBox;
+  width: 45px;
+  padding-left: $basic-padding;
+  padding-right: $basic-padding;
+}

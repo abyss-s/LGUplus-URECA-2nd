@@ -1,0 +1,48 @@
+@use "../style/base" as base;
+
+.TodoListItem {
+  padding: base.$basic-padding;
+  @include base.myBox;
+  height: base.$basic-height;
+  background-color: base.$netural-color;
+  &:nth-child(even) {
+    background: #f8f9fa;
+  }
+  .checkbox {
+    cursor: pointer;
+    flex: 1; // 차지할 수 있는 영역 모두 차지
+    @include base.myBox;
+    svg {
+      // 아이콘
+      font-size: base.$body-font-size;
+    }
+    .text {
+      margin-left: 0.5rem;
+      flex: 1; // 차지할 수 있는 영역 모두 차지
+    }
+    // 체크되었을 때 보여줄 스타일
+    &.checked {
+      svg {
+        color: base.$primary-color;
+      }
+      .text {
+        color: base.$basic-change-color;
+        text-decoration: line-through;
+      }
+    }
+  }
+  .remove {
+    @include base.ibutton;
+    font-size: 1.5rem;
+    color: #ff6b6b;
+    cursor: pointer;
+    &:hover {
+      color: #ff8787;
+    }
+  }
+
+  // 엘리먼트 사이사이에 테두리를 넣어줌
+  & + & {
+    border-top: 1px solid #dee2e6;
+  }
+}
