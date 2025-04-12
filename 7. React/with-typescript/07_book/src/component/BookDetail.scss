@@ -1,0 +1,33 @@
+@use "../style/base" as base;
+
+.book {
+  &-card {
+    @include base.column-box;
+    @include base.border;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    width: 280px;
+  }
+  &-image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  &-info {
+    @include base.column-box;
+    text-align: center;
+    margin-top: 12px;
+  }
+  &-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  &-author {
+    color: #666;
+  }
+  &-price {
+    color: base.$primary-color;
+    font-weight: bold;
+  }
+}
