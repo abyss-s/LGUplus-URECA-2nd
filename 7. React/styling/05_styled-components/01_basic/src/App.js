@@ -1,5 +1,5 @@
 import "./App.css";
-
+import styled from "styled-components";
 /*
 1. 일반적인 형식
 형식] 
@@ -26,10 +26,33 @@ const StyledMyButton = styled(custom)`
 `
 */
 
+// const Button = styled.button`
+//   background-color: #007bff;
+//   color: white;
+//   padding: 20px, 20px;
+//   border: none;
+//   height: 35px;
+//   cursor: pointer;
+//   &:hover {
+//     background-color: #0056b3;
+//   }
+// `;
+const Button = styled.button`
+  background-color: ${(props) => (props.primary ? "#007bff" : "#6c757d")};
+  color: white;
+  padding: 20px, 20px;
+  border: none;
+  height: 35px;
+  cursor: pointer;
+  &:hover {
+    background-color: ${(props) => (props.primary ? "#0056b3" : "#5a6268")};
+  }
+`;
 function App() {
   return (
     <div>
-      
+      <Button>default 버튼</Button>
+      <Button primary>primary 버튼</Button>
     </div>
   );
 }
