@@ -117,9 +117,17 @@
        - [1) SASS/SCSS](7.%20React/4.css-sass.md)
        - [2) styled-components](7.%20React/6.css-styled-components.md)
 
-8.  **Web Security**
-9.  **Software design**
-10. **Agile**
+    3. **리액트 심화**
+
+       - [1) 리액트 + 타입스크립트](7.%20React/7.react-ts.md)
+
+8.  **Next.js**
+
+    - [1) Next.js 시작](8.%20NextJS/1.nextjs-intro.md)
+
+9.  **Web Security**
+10. **Software design**
+11. **Agile**
 
 ## 🦞 Assignments
 
