@@ -124,6 +124,7 @@
 8.  **Next.js**
 
     - [1) Next.js 시작](8.%20NextJS/1.nextjs-intro.md)
+    - [2) 데이터 페칭](8.%20NextJS/2.data-fetching.md)
 
 9.  **Web Security**
 10. **Software design**
