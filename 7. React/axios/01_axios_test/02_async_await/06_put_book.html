@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>도서 정보 수정</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 2rem;
+        max-width: 700px;
+        margin: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      td {
+        padding: 10px;
+        vertical-align: top;
+      }
+      td:first-child {
+        width: 120px;
+        font-weight: bold;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.5rem;
+      }
+      button {
+        margin-top: 1rem;
+        padding: 0.7rem 1.5rem;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="bookForm">
+      <table>
+        <caption>
+          <h2>도서 정보 수정</h2>
+        </caption>
+        <tr>
+          <td>ISBN</td>
+          <td><input type="text" id="isbn" name="isbn" required readonly /></td>
+        </tr>
+        <tr>
+          <td>제목</td>
+          <td><input type="text" id="title" name="title" required /></td>
+        </tr>
+        <tr>
+          <td>저자</td>
+          <td><input type="text" id="author" name="author" required /></td>
+        </tr>
+        <tr>
+          <td>가격</td>
+          <td><input type="number" id="price" name="price" required /></td>
+        </tr>
+        <tr>
+          <td>설명</td>
+          <td><textarea id="describ" name="describ" rows="4" required></textarea></td>
+        </tr>
+        <tr>
+          <td>이미지 URL</td>
+          <td><input type="text" id="img" name="img" required /></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center"><button type="submit">수정하기</button></td>
+        </tr>
+      </table>
+    </form>
+
+    <script>
+      const bookIsbn = "54321";
+      const API_BASE_URL = "http://localhost:8080/eureka/book";
+
+      // 1. 페이지 로딩 시 기존 도서 정보 가져오기
+      window.onload = async function () {
+        try {
+          const response = await axios.get(`${API_BASE_URL}/${bookIsbn}`);
+          const book = response.data;
+          document.getElementById("isbn").value = book.isbn;
+          document.getElementById("title").value = book.title;
+          document.getElementById("author").value = book.author;
+          document.getElementById("price").value = book.price;
+          document.getElementById("describ").value = book.describ;
+          document.getElementById("img").value = book.img;
+        } catch (error) {
+          alert("도서 정보를 불러오는 데 실패했습니다.");
+          console.error(error);
+        }
+      };
+
+      // 2. 수정 요청
+      document.getElementById("bookForm").addEventListener("submit", updateBook);
+      async function updateBook(e) {
+        e.preventDefault();
+
+        const bookData = {
+          isbn: document.getElementById("isbn").value,
+          title: document.getElementById("title").value,
+          author: document.getElementById("author").value,
+          price: document.getElementById("price").value,
+          describ: document.getElementById("describ").value,
+          img: document.getElementById("img").value,
+        };
+
+        try {
+         
+        } catch (error) {
+          alert("수정 중 오류가 발생했습니다.");
+          console.error(error);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>도서 목록</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      button {
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .book {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>도서 목록 보기</h1>
+    <button onclick="fetchData()">데이터 가져오기</button>
+    <div id="result">결과가 여기에 표시됩니다</div>
+
+    <script>
+      function fetchData() {
+        const resultEl = document.getElementById("result");
+        const API_BASE_URL = "http://localhost:8080/eureka/book";
+        
+        resultEl.innerHTML = "로딩 중...";
+
+        try {
+         
+        } catch (error) {
+          console.error(error);
+          resultEl.textContent = "오류 발생: " + error;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>도서 목록</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      .controls {
+        margin-bottom: 20px;
+      }
+      select,
+      input[type="text"] {
+        padding: 8px;
+        margin-right: 10px;
+      }
+      button {
+        padding: 8px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .book {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>도서 목록 검색</h1>
+
+    <div class="controls">
+      <select id="key">
+        <option value="title">제목</option>
+        <option value="author">저자</option>
+      </select>
+      <input type="text" id="word" placeholder="검색어 입력" />
+      <button onclick="fetchData()">검색</button>
+    </div>
+
+    <div id="result">결과가 여기에 표시됩니다</div>
+
+    <script>
+      async function fetchData() {
+        const resultEl = document.getElementById("result");
+        const key = document.getElementById("key").value;
+        const word = document.getElementById("word").value.trim();
+        const params = { key, word, pageNo: 1 };
+        const API_BASE_URL = "http://localhost:8080/eureka/book";
+        
+        try {
+         
+        } catch (error) {
+          console.error(error);
+          resultEl.textContent = "오류 발생: " + error;
+        }
+      }
+    </script>
+  </body>
+</html>

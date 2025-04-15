@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>도서 정보 등록</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 2rem;
+        max-width: 700px;
+        margin: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      td {
+        padding: 10px;
+        vertical-align: top;
+      }
+      td:first-child {
+        width: 120px;
+        font-weight: bold;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.5rem;
+      }
+      button {
+        margin-top: 1rem;
+        padding: 0.7rem 1.5rem;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="bookForm">
+      <table>
+        <caption>
+          <h2>도서 정보 등록</h2>
+        </caption>
+        <tr>
+          <td>ISBN</td>
+          <td><input type="text" id="isbn" name="isbn" required /></td>
+        </tr>
+        <tr>
+          <td>제목</td>
+          <td><input type="text" id="title" name="title" required /></td>
+        </tr>
+        <tr>
+          <td>저자</td>
+          <td><input type="text" id="author" name="author" required /></td>
+        </tr>
+        <tr>
+          <td>가격</td>
+          <td><input type="number" id="price" name="price" required /></td>
+        </tr>
+        <tr>
+          <td>설명</td>
+          <td><textarea id="describ" name="describ" rows="4" required></textarea></td>
+        </tr>
+        <tr>
+          <td>이미지 URL</td>
+          <td><input type="text" id="img" name="img" required /></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center"><button type="submit">등록하기</button></td>
+        </tr>
+      </table>
+    </form>
+
+    <script>
+      document.getElementById("bookForm").addEventListener("submit", regist);
+      const API_BASE_URL = "http://localhost:8080/eureka/book";
+      async function regist(e) {
+        e.preventDefault();
+
+        const bookData = {
+          isbn: document.getElementById("isbn").value,
+          title: document.getElementById("title").value,
+          author: document.getElementById("author").value,
+          price: document.getElementById("price").value,
+          describ: document.getElementById("describ").value,
+          img: document.getElementById("img").value,
+        };
+        try {
+         
+        } catch (error) {
+          alert("도서 등록 실패");
+          console.error(error);
+        }
+      }
+    </script>
+  </body>
+</html>

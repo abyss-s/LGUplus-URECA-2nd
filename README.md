@@ -120,11 +120,11 @@
     3. **리액트 심화**
 
        - [1) 리액트 + 타입스크립트](7.%20React/7.react-ts.md)
+       - [2) axios](7.%20React//8.data-fetching-axios.md)
 
 8.  **Next.js**
 
-    - [1) Next.js 시작](8.%20NextJS/1.nextjs-intro.md)
-    - [2) 데이터 페칭](8.%20NextJS/2.data-fetching.md)
+    - [1) Next.js 개요](8.%20NextJS/1.nextjs-intro.md)
 
 9.  **Web Security**
 10. **Software design**
@@ -145,7 +145,7 @@
 
 ### 미니프로젝트
 
-[Giuhub](https://github.com/Ureca-Mini-Project-Team4/Oh-no-its-me)
+[Github](https://github.com/Ureca-Mini-Project-Team4/Oh-no-its-me)
 
 ### 종합 프로젝트
 
