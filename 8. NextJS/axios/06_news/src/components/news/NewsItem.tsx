@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./NewsItem.module.scss";
-import { Article } from "@/types/article";
+import { Article } from "@/types/news";
 
 const NewsItem = ({ article }: { article: Article }) => {
   const { title, description, url, urlToImage } = article;

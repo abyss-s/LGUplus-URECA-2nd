@@ -111,20 +111,21 @@
        - [2) 리액트 컴포넌트와 상태 관리](7.%20React/2.react-comp-state.md)
        - [3) 리액트 Hook](7.%20React/3.react-hook.md)
        - [4) 리액트 컴포넌트 성능 최적화](7.%20React/5.react-rendering-optimization.md)
+       - [5) 리액트 + 타입스크립트](7.%20React/7.react-ts.md)
 
     2. **스타일링**
 
        - [1) SASS/SCSS](7.%20React/4.css-sass.md)
        - [2) styled-components](7.%20React/6.css-styled-components.md)
 
-    3. **리액트 심화**
-
-       - [1) 리액트 + 타입스크립트](7.%20React/7.react-ts.md)
-       - [2) axios](7.%20React//8.data-fetching-axios.md)
-
 8.  **Next.js**
 
-    - [1) Next.js 개요](8.%20NextJS/1.nextjs-intro.md)
+    - [Next.js 개요](8.%20NextJS/1.nextjs-intro.md)
+
+    - **3. 데이터 페칭**
+
+      - [1) axios](8.%20NextJS/2.nextjs-axios.md)
+      - [2) react query](8.%20NextJS/3.nextjs-react-query.md)
 
 9.  **Web Security**
 10. **Software design**
