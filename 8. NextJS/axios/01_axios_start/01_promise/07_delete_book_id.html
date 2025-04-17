@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Axios CDN 예제</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      button {
+        margin-top: 10px;
+      }
+      pre {
+        background: #f0f0f0;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Axios delete 요청 예제</h1>
+    <input type="text" id="isbn" placeholder="isbn을 입력하세요" />
+    <button onclick="removeBook()">삭제하기</button>
+
+    <pre id="result">결과가 여기에 표시됩니다</pre>
+    <script>
+    const API_BASE_URL = "http://localhost:8080/eureka/book"
+      function removeBook() {
+        const isbn = document.getElementById("isbn").value;
+       
+      }
+    </script>
+  </body>
+</html>

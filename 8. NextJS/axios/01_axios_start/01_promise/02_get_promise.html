@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Axios CDN 예제</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      button {
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      #result1,
+      #result2 {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Axios GET 요청 예제</h1>
+    <button onclick="fetchData()">데이터 가져오기</button>
+    <pre id="result1">결과가 여기에 표시됩니다</pre>
+    <pre id="result2">결과가 여기에 표시됩니다</pre>
+    <script>
+    const API_BASE_URL1 = "https://jsonplaceholder.typicode.com/posts"
+    const API_BASE_URL2 =  "https://jsonplaceholder.typicode.com/posts/1"
+    function fetchData() {
+    }
+    </script>
+  </body>
+</html>
