@@ -79,7 +79,7 @@
     </form>
 
     <script>
-      const bookIsbn = "54321";
+      const bookIsbn = "979-11-1";
       const API_BASE_URL = "http://localhost:8080/eureka/book";
 
       // 1. 페이지 로딩 시 기존 도서 정보 가져오기
@@ -114,8 +114,16 @@
           describ: document.getElementById("describ").value,
           img: document.getElementById("img").value,
         };
-
-      
+        axios
+          .put(API_BASE_URL, bookData)
+          .then((response) => {
+            alert("수정 성공");
+            console.log(response.data);
+          })
+          .catch((error) => {
+            alert("수정 실패");
+            console.log(error);
+          });
       }
     </script>
   </body>

@@ -38,12 +38,18 @@
 
     <script>
       async function fetchData() {
-        const resultBox = document.getElementById("result");
+        const resultBox1 = document.getElementById("result1");
+        const resultBox2 = document.getElementById("result2");
         const API_BASE_URL1 = "https://jsonplaceholder.typicode.com/posts/1";
         const API_BASE_URL2 = "https://jsonplaceholder.typicode.com/posts";
-        
         try {
-        
+          const response1 = await axios.get(API_BASE_URL1);
+          console.log(response1.data);
+          resultBox1.textContent = JSON.stringify(response1.data);
+          const response2 = await axios.get(API_BASE_URL2);
+          console.log(response2.data);
+          resultBox2.textContent = JSON.stringify(response2.data);
+          
         } catch (error) {
           console.error(error);
           resultBox.textContent = "오류 발생: " + error;
