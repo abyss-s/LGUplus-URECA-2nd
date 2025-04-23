@@ -118,6 +118,11 @@
        - [1) SASS/SCSS](7.%20React/4.css-sass.md)
        - [2) styled-components](7.%20React/6.css-styled-components.md)
 
+    3. **상태관리**
+
+       - [1) Context API](7.%20React/8.react-context-api.md)
+       - [2) Redux](7.%20React/9.redux.md)
+
 8.  **Next.js**
 
     - [Next.js 개요](8.%20NextJS/1.nextjs-intro.md)
