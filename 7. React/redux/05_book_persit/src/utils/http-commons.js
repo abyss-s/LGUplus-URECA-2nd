@@ -1,7 +1,7 @@
 import axios from "axios";
 
-//const BASE_URL = "http://10.4.2.100:8080/eureka/";
-const BASE_URL = "http://localhost:8080/eureka/";
+const BASE_URL = "http://10.4.2.100:8080/eureka/";
+// const BASE_URL = "http://localhost:8080/eureka/";
 
 // local vue api axios instance
 function localAxios() {

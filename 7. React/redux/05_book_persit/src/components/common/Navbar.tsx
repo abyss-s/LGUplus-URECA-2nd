@@ -29,9 +29,6 @@ export default function Navbar() {
       </ul>
       <div className={styles.search}>
         <Profile />
-        <Link href="/member/regist">
-          <button>회원가입</button>
-        </Link>
       </div>
     </nav>
   );
