@@ -19,6 +19,9 @@ export default function MemberDetail() {
   //////////TODO M14. member state를 Custom hook을 통해 전달 받기
   const { memberState } = useAuth();
 
+  // if (memberState) {
+  //   setId(memberState.id);
+  // }
   //////////TODO M15. id 상태 변경하기
   useEffect(() => {
     if (memberState) {
