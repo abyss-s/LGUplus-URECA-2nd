@@ -26,6 +26,10 @@ public class MemberServiceImp implements MemberService {
 			
 			if(!pass.equals(user.getPassword()))
 				throw new MemberException("비밀 번호 오류 발생!!!!");
+			
+			if(user.getWithdraw().equals("Y"))
+				throw new MemberException("탈퇴한 회원 입니다.!!!!");
+			
 			return user;
 		} catch (SQLException e) {
 			e.printStackTrace();

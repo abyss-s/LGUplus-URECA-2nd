@@ -45,6 +45,10 @@ public class MemberController {
 	private static final String SUCCESS="성공";
 	private static final String FAIL="사용 불가 토큰";
 	private final MemberService memberService;
+
+	private final String HEADER_AUTH = "Authorization";
+	private final String Refresh_AUTH = "Refresh-Token";
+	
 	
 	////////////////TODO 2. 토큰 관리를 위해 JWTUtil  선언하기 
 	private final JWTUtil jwtUtil; 
@@ -66,10 +70,63 @@ public class MemberController {
 	}
 	
 	////////////////TODO 3. 인증 처리를 위한 함수 정의하기  
+	@PostMapping("/login")
+	public ResponseEntity<Map<String, Object>> login(@RequestBody Member member){
+		log.debug("login member :{}", member);
+		
+		HttpHeaders headers = new HttpHeaders();
+		HttpStatus status = HttpStatus.OK;
+		Map<String, Object> resultMap= new HashMap<String,Object>();
+		try {
+			String id = member.getId();
+			Member loginUser =  memberService.login(id , member.getPassword());
+			
+			if(loginUser != null) {
+				String accessToken = jwtUtil.createAccessToken(id);
+				String refreshToken = jwtUtil.createRefreshToken(id);
+				log.debug("accessToken:{}",accessToken);
+				log.debug("refreshToken:{}",refreshToken);
+				
+				//refreshToken 확인용으로  DB에 저장하기 
+				memberService.saveRefreshToken(id, refreshToken);
+				
+				//token을 헤더에 추가 
+				headers.add(HEADER_AUTH, accessToken);
+				headers.add(Refresh_AUTH, refreshToken);
+				resultMap.put("message", SUCCESS);
+			}
+		} catch (Exception e) {
+			log.debug("로그인 에러 발생:{}", e);
+			resultMap.put("message", "인증 처리 중 오류 발생");
+			status = HttpStatus.INTERNAL_SERVER_ERROR;
+		}
+		
+		return new ResponseEntity<Map<String,Object>>(resultMap, headers, status);
+	}
 	
 	
-	////////////////TODO 4. 로그 아웃을 위한 함수 정의하기 
-	
+	////////////////TODO 4. 로그 아웃을 위한 함수 정의하기
+	@Operation(summary = "로그인", description = "아이디와 비밀번호를 이용하여 로그인 처리.")
+	@GetMapping("/logout/{userId}") 
+	public ResponseEntity<?> logout (@PathVariable("userId") String id, @RequestHeader(HEADER_AUTH) String accessToken){
+		Map<String, Object> result = new HashMap<>();
+		HttpStatus status = HttpStatus.OK;
+		try {
+			if(isAuth(id, accessToken)) {
+				memberService.deleRefreshToken(id);
+				result.put("message", SUCCESS);
+			}else {
+				log.error("사용 불가 토큰!!!!");
+				result.put("message", "사용 불가 토큰");
+				status = HttpStatus.UNAUTHORIZED;
+			}
+		}catch (Exception e) {
+			log.error("로그 아웃 실패:{}", e);
+			result.put("message", e.getMessage());
+			status = HttpStatus.INTERNAL_SERVER_ERROR;
+		}
+		return new ResponseEntity<Map<String,Object>>(result, status);
+	}
 	
 	public boolean isAuth(String userId, String authorHeader) {
 		log.debug("search - Authorization:{}",authorHeader);
@@ -87,14 +144,21 @@ public class MemberController {
 			description = "아이디에 대한 사용자의 상세 정보를 반환해 줍니다.",
 			responses ={@ApiResponse(responseCode = "200", description = "책목록 OK!!")})
 	@GetMapping("/{id}")
-	public ResponseEntity<Map<String, Object> > search(@PathVariable("id") @Parameter(description = "인증할 회원의 아이디.", required = true) String id){
+	public ResponseEntity<Map<String, Object> > search(@PathVariable("id") @Parameter(description = "인증할 회원의 아이디.", required = true) String id 
+			, @RequestHeader(HEADER_AUTH) String accessToken){
 		log.debug("search - id:{}",id);
 		HttpStatus status = HttpStatus.OK;
-		////////////////TODO 5. 토큰으로 체크하고 안전하면 회원정보를 제공하는 코드 작성  
 		Map<String, Object> resultMap = new HashMap<>();
-		Member member = memberService.search(id);
-		resultMap.put("member", member);
-		resultMap.put("message", SUCCESS);
+		////////////////TODO 5. 토큰으로 체크하고 안전하면 회원정보를 제공하는 코드 작성
+		if(isAuth(id, accessToken)) {  
+			Member member = memberService.search(id);
+			resultMap.put("member", member);
+			resultMap.put("message", SUCCESS);
+		}else {
+			log.error("사용 불가 토큰!!!!");
+			resultMap.put("message", "사용 불가 토큰");
+			status = HttpStatus.UNAUTHORIZED;
+		}
 		return new ResponseEntity<Map<String, Object>>(resultMap, status);
 	}
 	
@@ -111,35 +175,47 @@ public class MemberController {
 		return new ResponseEntity<Map<String, Object>>(resultMap, status);
 	}
 	
-	@Operation(	summary = "회원 정보 수정", 
-				description = "회원 아이디에 대한 상세 정보를 수정합니다.",
-				responses ={@ApiResponse(responseCode = "200", description = "회원 정보 수정 OK!!")})
+	@Operation(summary = "회원 정보 수정", description = "회원 아이디에 대한 상세 정보를 수정합니다.", responses = {
+			@ApiResponse(responseCode = "200", description = "회원 정보 수정 OK!!") })
 	@PutMapping
-	public ResponseEntity<Map<String, Object>> update(@RequestBody Member member){
-		log.debug("update - member:{}",member);
+	public ResponseEntity<Map<String, Object>> update(@RequestBody Member member,
+			@RequestHeader("Authorization") String authorHeader) {
+		log.debug("update - member:{}", member);
+		log.debug("update - Authorization:{}", authorHeader);
 		HttpStatus status = HttpStatus.OK;
 		Map<String, Object> resultMap = new HashMap<>();
-		resultMap.put("message",SUCCESS);
-		////////////////TODO 5. 토큰으로 체크하고 안전하면 회원정보를 수정하는 코드 작성 
-		memberService.update(member);
+		if (isAuth(member.getId(), authorHeader)) {
+			log.info("토큰 ID와 요청 id가 같음 사용 가능한 토큰!!!");
+			resultMap.put("message", SUCCESS);
+			memberService.update(member);
+		} else {
+			log.error(FAIL);
+			resultMap.put("message", FAIL);
+			status = HttpStatus.UNAUTHORIZED;
+		}
 		return new ResponseEntity<Map<String, Object>>(resultMap, status);
 	}
 	
-	@Operation(	summary = "회원 탈퇴", 
-			description = "회원 아이디를 탈퇴 처리합니다.",
-			responses ={@ApiResponse(responseCode = "200", description = "탈퇴 OK")})
+	@Operation(summary = "회원 탈퇴", description = "회원 아이디를 탈퇴 처리합니다.", responses = {
+			@ApiResponse(responseCode = "200", description = "탈퇴 OK") })
 	@DeleteMapping("/{id}")
-	public ResponseEntity<String> remove(@PathVariable("id") String id){
-		log.debug("update - id:{}",id);
-		
+	public ResponseEntity<String> remove(@PathVariable("id") String id,
+			@RequestHeader("Authorization") String authorHeader) {
+		log.debug("update - id:{}", id);
+
 		Map<String, Object> resultMap = new HashMap<>();
-		String msg =SUCCESS;
+		String msg = SUCCESS;
 		HttpStatus status = HttpStatus.OK;
-		log.info("토큰 ID와 요청 id가 같음 사용 가능한 토큰!!!");
-		resultMap.put("message",msg);
-		////////////////TODO 5. 토큰으로 체크하고 안전하면 회원정보를 삭제하는 코드 작성
-		memberService.remove(id);
-		return new ResponseEntity<String>(SUCCESS,status);
+		if (isAuth(id, authorHeader)) {
+			log.info("토큰 ID와 요청 id가 같음 사용 가능한 토큰!!!");
+			resultMap.put("message", msg);
+			memberService.remove(id);
+		} else {
+			log.error("사용 불가 토큰!!!");
+			resultMap.put("message", "사용 불가 토큰");
+			status = HttpStatus.UNAUTHORIZED;
+		}
+		return new ResponseEntity<String>(SUCCESS, status);
 	}
 }
 

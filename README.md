@@ -133,6 +133,10 @@
       - [2) react query](8.%20NextJS/3.nextjs-react-query.md)
 
 9.  **Web Security**
+
+    - [1) CORS](9.%20Web-Security/cors.md)
+    - [2) JWT](9.%20Web-Security/jwt.md)
+
 10. **Software design**
 11. **Agile**
 

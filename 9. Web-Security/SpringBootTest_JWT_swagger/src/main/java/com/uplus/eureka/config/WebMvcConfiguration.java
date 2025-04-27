@@ -55,7 +55,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
 	            		 				"/css/**", 
 	            		 				"/img/**",
 	            		 				"/error",
-	            		 				"/book/**",
+	            		 				"/books/**",
 	            		 				"/favicon.ico",
 	            		 				"/swagger-ui/**"
 	            		 				,"/v3/api-docs/**"
