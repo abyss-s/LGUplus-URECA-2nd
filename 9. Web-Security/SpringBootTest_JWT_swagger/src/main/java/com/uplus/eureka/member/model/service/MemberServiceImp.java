@@ -26,10 +26,6 @@ public class MemberServiceImp implements MemberService {
 			
 			if(!pass.equals(user.getPassword()))
 				throw new MemberException("비밀 번호 오류 발생!!!!");
-			
-			if(user.getWithdraw().equals("Y"))
-				throw new MemberException("탈퇴한 회원 입니다.!!!!");
-			
 			return user;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -89,13 +85,13 @@ public class MemberServiceImp implements MemberService {
 	public void saveRefreshToken(String userId, String refreshToken) throws Exception {
 		log.debug("saveRefreshToken:userId-{}  refreshToken-{}",userId, refreshToken);
 		Map<String, String> map = new HashMap<String, String>();
-		map.put("userId", userId);
+		map.put("id", userId);
 		map.put("token", refreshToken);
 		memberDao.saveRefreshToken(map);
 	}
 
 	@Override
-	public Object getRefreshToken(String userId) throws Exception {
+	public String getRefreshToken(String userId) throws Exception {
 		log.debug("getRefreshToken:userId-{}  ",userId);
 		return memberDao.getRefreshToken(userId);
 	}
@@ -103,10 +99,7 @@ public class MemberServiceImp implements MemberService {
 	@Override
 	public void deleRefreshToken(String userId) throws Exception {
 		log.debug("deleRefreshToken:userId-{}  ",userId);
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("userId", userId);
-		map.put("token", null);
-		memberDao.deleteRefreshToken(map);
+		memberDao.deleteRefreshToken(userId);
 	}
 
 }

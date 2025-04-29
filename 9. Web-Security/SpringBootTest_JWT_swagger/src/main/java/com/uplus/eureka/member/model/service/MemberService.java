@@ -9,6 +9,6 @@ public interface MemberService {
 	void update(Member user) ;
 	void remove(String id)   ;
 	public void saveRefreshToken(String userId, String refreshToken) throws Exception ;
-	public Object getRefreshToken(String userId) throws Exception ;
+	public String getRefreshToken(String userId) throws Exception ;
 	public void deleRefreshToken(String userId) throws Exception ;
 }

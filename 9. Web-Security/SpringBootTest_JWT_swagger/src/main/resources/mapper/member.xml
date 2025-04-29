@@ -37,9 +37,9 @@
 		where id = #{id}
 	</select>
 	
-	<update id="deleteRefreshToken" parameterType="map">
+	<update id="deleteRefreshToken" parameterType="string">
 		update members
-		set token = #{token, jdbcType=VARCHAR}
+		set token = ''
 		where id = #{id}
 	</update>
 </mapper>
