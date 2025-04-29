@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+	<!DOCTYPE html>
+	<html lang="ko">
+	  <head>
+	    <meta charset="UTF-8" />
+	    <title>XSS 실습 예제</title>
+	  </head>
+	  <body>
+	    <h1>XSS 실습</h1>
+	    <form method="get" action="">
+	      <label>이름을 입력하세요:</label>
+	      <input type="text" name="name" />
+	      <button type="submit">제출</button>
+	    </form>
+
+	    <h2>입력 결과:</h2>
+	    <div id="output">
+	      <!-- 여기 주의! 사용자가 입력한 데이터를 필터 없이 출력함 -->
+	      <script>
+	        const params = new URLSearchParams(window.location.search);
+	        const name = params.get("name");
+	        if (name) {
+	          document.getElementById("output").innerHTML = `안녕하세요, ${name}님!`;
+	        }
+	      </script>
+	    </div>
+	  </body>
+	</html>

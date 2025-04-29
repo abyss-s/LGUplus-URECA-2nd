@@ -1,7 +1,6 @@
 # LGUplus-URECA-2nd
 
 > **유레카 SW교육과정 2기 활동 내용을 정리합니다😉**
-> 커리큘럼 트랙 별로 폴더 분류
 
 ## 👩‍🏫 Lecture
 
@@ -127,7 +126,7 @@
 
     - [Next.js 개요](8.%20NextJS/1.nextjs-intro.md)
 
-    - **3. 데이터 페칭**
+    - **데이터 페칭**
 
       - [1) axios](8.%20NextJS/2.nextjs-axios.md)
       - [2) react query](8.%20NextJS/3.nextjs-react-query.md)
@@ -136,6 +135,8 @@
 
     - [1) CORS](9.%20Web-Security/cors.md)
     - [2) JWT](9.%20Web-Security/jwt.md)
+    - [3) Next-Auth](9.%20Web-Security/next-auth.md)
+    - [4) XSS & CSRF](9.%20Web-Security/xss-and-csrf.md)
 
 10. **Software design**
 11. **Agile**
@@ -155,7 +156,7 @@
 
 ### 미니프로젝트
 
-[Github](https://github.com/Ureca-Mini-Project-Team4/Oh-no-its-me)
+[↗️Github](https://github.com/Ureca-Mini-Project-Team4/Oh-no-its-me)
 
 ### 종합 프로젝트
 

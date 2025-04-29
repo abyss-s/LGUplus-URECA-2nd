@@ -60,7 +60,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
 	            		 				"/swagger-ui/**"
 	            		 				,"/v3/api-docs/**"
 	            		 				,"/member/login"
-	            		 
+	            		 				,"/steal/**"
 	            		 				);    
 	 }
 	

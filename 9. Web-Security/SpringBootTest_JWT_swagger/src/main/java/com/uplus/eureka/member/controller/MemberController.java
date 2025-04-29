@@ -107,6 +107,7 @@ public class MemberController {
 	@GetMapping("/logout/{userId}")
 	public ResponseEntity<?> logout(@PathVariable("userId") String id, @RequestHeader(HEADER_AUTH) String accessToken) {
 		Map<String, Object> result = new HashMap<>();
+		log.debug("MemberController.logout..........................id:{}",id);
 		HttpStatus status = HttpStatus.OK;
 		try {
 			if (isAuth(id, accessToken)) {

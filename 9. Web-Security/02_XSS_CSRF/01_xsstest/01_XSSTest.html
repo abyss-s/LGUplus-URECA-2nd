@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XSS 실습 예제</title>
+  </head>
+  <body>
+    <h1>XSS 실습 예제</h1>
+    <form>
+      <label>이름을 입력하세요:</label>
+      <input type="text" name="name" />
+      <button type="submit">제출</button>
+    </form>
+    <div id="result"></div>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get("name");
+      if (name) {
+        document.getElementById("result").innerHTML = `안녕하세요 ${name}님`;
+      }
+    </script>
+  </body>
+</html>

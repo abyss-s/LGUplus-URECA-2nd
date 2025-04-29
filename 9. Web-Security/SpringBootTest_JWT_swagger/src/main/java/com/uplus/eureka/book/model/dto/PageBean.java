@@ -19,7 +19,7 @@ public class PageBean implements Serializable{
 	private int pageNo;
 	/**한 페이지에 보여주 content 개수*/
 	@Schema(description = "한페이지에 보여줄 데이타 개수" , example = "3")
-	private int interval = 3;
+	private int interval = 20;
 	/**페이지 시작 번호*/
 	private int start=0;
 }
