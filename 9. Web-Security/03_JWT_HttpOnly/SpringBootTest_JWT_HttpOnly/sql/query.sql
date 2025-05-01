@@ -1,0 +1,1 @@
+alter table members add token varchar(1024);
